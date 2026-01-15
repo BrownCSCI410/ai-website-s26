@@ -41,9 +41,17 @@ export default function HomePage() {
             className="p-8 rounded-[26px] border border-white/20 bg-blue-900/60 backdrop-blur-md shadow-2xl"
             style={{ maxWidth: "550px" }}
           >
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-2">
-              CSCI 0410
-            </h1>
+           <div className="flex-shrink-0">
+            <Image
+              src="/logop.png"
+              alt="course logo"
+              width={380}
+              height={5}
+              priority
+              className="drop-shadow-2xl"
+            />
+          </div>
+
             <h2 className="text-xl md:text-2xl font-bold text-yellow-400 mb-4 uppercase tracking-wide">
               Foundations of AI and Machine Learning
             </h2>
