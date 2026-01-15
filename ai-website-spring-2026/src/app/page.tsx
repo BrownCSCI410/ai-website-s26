@@ -3,86 +3,59 @@ import Image from "next/image";
 
 export default function HomePage() {
   return (
-    <main className="relative min-h-screen text-white">
-      {/* Background */}
-      <div className="cr-bg" aria-hidden="true" />
+    <main className="relative min-h-screen text-white overflow-x-hidden">
+      {/* Background Layer */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: 'url("/bg-arena.jpg")' }}
+        aria-hidden="true" 
+      />
 
-      {/* Dark overlay for readability (not blur) */}
-      <div className="absolute inset-0 bg-black/35" aria-hidden="true" />
+      {/* Dark overlay */}
+      <div className="absolute inset-0 z-10 bg-black/40" aria-hidden="true" />
 
-      {/* Content */}
-      <div className="relative mx-auto max-w-6xl px-4 py-10 min-h-screen flex items-center">
-        <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* LEFT COLUMN: Mascot + title box to its right */}
-          <div className="flex justify-center md:justify-start">
-            <div className="cr-hero">
-              {/* Mascot (no bubble) */}
-              <Image
-                src="/mascot.png"
-                alt="Course mascot"
-                width={360}
-                height={360}
-                priority
-                className="cr-mascot"
-              />
-
-              {/* Title box to the right of mascot */}
-              <div className="cr-title-card">
-                <h1 className="cr-title">CS COURSE ARENA</h1>
-                <p className="cr-subtitle">
-                  Welcome to the battlefield. Announcements, assignments, and resources live here.
-                </p>
-
-                <div className="mt-4 flex flex-col sm:flex-row gap-3">
-                  <a className="cr-button" href="/syllabus">
-                    Syllabus
-                  </a>
-                  <a className="cr-button cr-button-secondary" href="/schedule">
-                    Schedule
-                  </a>
-                </div>
-              </div>
-            </div>
+      {/* Main Content Container */}
+      <div className="relative z-20 mx-auto max-w-7xl px-6 min-h-screen flex items-center justify-center">
+        
+        {/* Flex Row: Centers everything. 
+            Style 'gap' ensures the spacing between image and text. */}
+        <div 
+          className="flex flex-col md:flex-row items-center justify-center w-full"
+          style={{ gap: "80px" }} 
+        >
+          
+          {/* LEFT: Mascot (Centered in its own space) */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/hog_rider.png"
+              alt="Course mascot"
+              width={380}
+              height={380}
+              priority
+              className="drop-shadow-2xl"
+            />
           </div>
 
-          {/* RIGHT COLUMN: Big info box */}
-          <section className="cr-card">
-            <div className="cr-card-header">
-              <h2 className="text-2xl font-extrabold tracking-wide">Quick Info</h2>
-              <p className="cr-subtitle">
-                Everything you need at a glance.
-              </p>
-            </div>
+          {/* RIGHT: Text Box (Limited width for readability) */}
+          <div 
+            className="p-8 rounded-[26px] border border-white/20 bg-blue-900/60 backdrop-blur-md shadow-2xl"
+            style={{ maxWidth: "550px" }}
+          >
+            <h1 className="text-4xl md:text-5xl font-black tracking-tight mb-2">
+              CSCI 0410
+            </h1>
+            <h2 className="text-xl md:text-2xl font-bold text-yellow-400 mb-4 uppercase tracking-wide">
+              Foundations of AI and Machine Learning
+            </h2>
+            <p className="text-base md:text-lg font-medium leading-relaxed opacity-90">
+              Welcome to CS410/1411! This course offers broad coverage of core topics in 
+              artificial intelligence (AI) as a prelude to students taking more in-depth 
+              AI courses later on. Throughout the course, you will delve into key AI 
+              models, reinforcement learning, and both supervised and unsupervised 
+              machine learning to build socially responsible AI.
+            </p>
+          </div>
 
-            <div className="cr-divider" />
-
-            <div className="space-y-4">
-              <div className="cr-pill">
-                <span className="cr-pill-dot" />
-                <p>
-                  <span className="font-extrabold">Office Hours:</span> Mon–Thu, 7–9pm
-                </p>
-              </div>
-
-              <div className="cr-pill">
-                <span className="cr-pill-dot" />
-                <p>
-                  <span className="font-extrabold">Next Due:</span> Lab 1 — Friday @ 11:59pm
-                </p>
-              </div>
-
-              <div className="cr-pill">
-                <span className="cr-pill-dot" />
-                <p>
-                  <span className="font-extrabold">Code:</span> GitHub repo + autograder link in Resources
-                </p>
-              </div>
-
-              <p className="text-sm text-white/80 pt-2">
-                Tip: put theme art in <span className="font-semibold">/public</span> and update image paths here.
-              </p>
-            </div>
-          </section>
         </div>
       </div>
     </main>
