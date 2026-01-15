@@ -1,9 +1,28 @@
 // src/app/page.tsx
+"use client";
 import Image from "next/image";
+import Navbar from "./components/Navbar";
+import { useRef } from "react";
 
 export default function HomePage() {
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playSound = () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/hog_rider_sound.mp3");
+    }
+
+    audioRef.current.currentTime = 0; // rewind if spam-clicked
+    audioRef.current.play();
+  };
   return (
     <main className="relative min-h-screen text-white overflow-x-hidden">
+      <Navbar />
+
+      {/* Spacer so content isn't hidden under fixed navbar */}
+      <div className="h-16" />
+
       {/* Background Layer */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" 
@@ -25,16 +44,21 @@ export default function HomePage() {
         >
           
           {/* LEFT: Mascot (Centered in its own space) */}
-          <div className="flex-shrink-0">
+          <div
+            className="flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
+            onClick={playSound}
+            title="HOG RIDAAAAA"
+          >
             <Image
               src="/hog_rider.png"
               alt="Course mascot"
               width={380}
               height={380}
               priority
-              className="drop-shadow-2xl"
+              className="drop-shadow-2xl select-none"
             />
           </div>
+
 
           {/* RIGHT: Text Box (Limited width for readability) */}
           <div 
