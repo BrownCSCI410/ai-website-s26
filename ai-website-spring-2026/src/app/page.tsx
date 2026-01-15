@@ -21,7 +21,7 @@ export default function HomePage() {
             Style 'gap' ensures the spacing between image and text. */}
         <div 
           className="flex flex-col md:flex-row items-center justify-center w-full"
-          style={{ gap: "80px" }} 
+          style={{ gap: "80px" }}
         >
           
           {/* LEFT: Mascot (Centered in its own space) */}
