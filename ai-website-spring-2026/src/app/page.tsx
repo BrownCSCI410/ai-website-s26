@@ -2,8 +2,8 @@
 "use client";
 import Image from "next/image";
 import Navbar from "./components/Navbar";
-import Top from "./Top";
-import Assignments from "./Assignments";
+import Top from "./components/Top";
+import Assignments from "./components/Assignments";
 
 export default function HomePage() {
 
