@@ -35,45 +35,47 @@ export default function Assignments() {
                     </tr>
                 </thead>
 
-                <Assignment
-                    assignmentName="Homework 1: Uninformed Search"
-                />
-                <Assignment
-                    assignmentName="Homework 2: A*"
-                />
-                <Assignment
-                    assignmentName="Homework 3: Adversarial Search"
-                />
-                <Assignment
-                    assignmentName="Homework 4: SAT"
-                />
-                <Assignment
-                    assignmentName="Homework 5: KRR"
-                />
-                <Assignment
-                    assignmentName="Homework 6: Constrained Optimization"
-                />
-                <Assignment
-                    assignmentName="Homework 7: Linear Regression and Bias-Variance Tradeoff"
-                />
-                <Assignment
-                    assignmentName="Homework 8: Neural Networks"
-                />
-                <Assignment
-                    assignmentName="Homework 9: MDPs and Reinforcement Learning"
-                />
-                <Assignment
-                    assignmentName="Homework 10: LLMs + PDDL"
-                />
-                <Assignment
-                    assignmentName="Final Project Part 1"
-                />
-                <Assignment
-                    assignmentName="Final Project Part 2"
-                />
-                <Assignment
-                    assignmentName="Final Project Part 3"
-                />
+                <tbody>
+                    <Assignment
+                        assignmentName="Homework 1: Uninformed Search"
+                    />
+                    <Assignment
+                        assignmentName="Homework 2: A*"
+                    />
+                    <Assignment
+                        assignmentName="Homework 3: Adversarial Search"
+                    />
+                    <Assignment
+                        assignmentName="Homework 4: SAT"
+                    />
+                    <Assignment
+                        assignmentName="Homework 5: KRR"
+                    />
+                    <Assignment
+                        assignmentName="Homework 6: Constrained Optimization"
+                    />
+                    <Assignment
+                        assignmentName="Homework 7: Linear Regression and Bias-Variance Tradeoff"
+                    />
+                    <Assignment
+                        assignmentName="Homework 8: Neural Networks"
+                    />
+                    <Assignment
+                        assignmentName="Homework 9: MDPs and Reinforcement Learning"
+                    />
+                    <Assignment
+                        assignmentName="Homework 10: LLMs + PDDL"
+                    />
+                    <Assignment
+                        assignmentName="Final Project Part 1"
+                    />
+                    <Assignment
+                        assignmentName="Final Project Part 2"
+                    />
+                    <Assignment
+                        assignmentName="Final Project Part 3"
+                    />
+                </tbody>
             </table>
           </div>
         </section>
