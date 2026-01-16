@@ -1,9 +1,10 @@
 // src/app/page.tsx
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Top from "./components/Top";
 import Assignments from "./components/Assignments";
+import Staff from "./components/Staff";
 
 export default function HomePage() {
 
@@ -34,6 +35,11 @@ export default function HomePage() {
         {/* Assignments (homeworks and final project) */}
         <section id="assignments">
             <Assignments/>
+        </section>
+
+        {/* Staff (Professor, HTAs, UTA-STAs, UTAs)*/}
+        <section id="staff">
+            <Staff/>
         </section>
 
       </div>
