@@ -4,7 +4,9 @@
 import Navbar from "./components/Navbar";
 import Top from "./components/Top";
 import Assignments from "./components/Assignments";
+import Lectures from "./components/Lectures";
 import Staff from "./components/Staff";
+
 
 export default function HomePage() {
 
@@ -40,6 +42,11 @@ export default function HomePage() {
         {/* Staff (Professor, HTAs, UTA-STAs, UTAs)*/}
         <section id="staff">
             <Staff/>
+        </section>
+
+        {/* Lectures */}
+        <section id="lectures">
+            <Lectures/>
         </section>
 
       </div>
