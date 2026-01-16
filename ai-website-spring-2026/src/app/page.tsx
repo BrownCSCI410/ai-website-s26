@@ -6,7 +6,7 @@ import Top from "./components/Top";
 import Assignments from "./components/Assignments";
 import Lectures from "./components/Lectures";
 import Staff from "./components/Staff";
-
+import Calendar from "./components/Calendar";
 
 export default function HomePage() {
 
@@ -48,6 +48,12 @@ export default function HomePage() {
         <section id="lectures">
             <Lectures/>
         </section>
+
+        {/* Calendar */}
+        <section id="calendar">
+            <Calendar/>
+        </section>
+
 
       </div>
     </main>
