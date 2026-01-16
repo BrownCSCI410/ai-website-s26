@@ -28,7 +28,7 @@ export default function Top() {
               >
               
               <Image
-                src="/hog_rider.png"
+                src="/clash_cards/hog_rider_with_feet_no_bg.png"
                 alt="Course mascot"
                 width={380}
                 height={380}

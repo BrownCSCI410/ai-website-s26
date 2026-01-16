@@ -45,81 +45,99 @@ export default function Staff() {
                 
                 <h3 className={`${staff_header_style}`}>Professors</h3>
                 <div className={`${staff_subsection_style}`}>
-                    <StaffCard name="Serena Booth (Professor)" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Serena Booth (Professor)" pronouns="she/her/hers"
+                    blurb="Serena a (new) Assistant Professor in Computer Science at Brown University. At Brown, she leads the GIRAFFE Lab, where she and her students work on questions specification, governance, and interaction for AI systems and robots. After finishing her PhD at MIT in 2023, Serena worked in the U.S. Senate as an AI policy advisor to advance U.S. AI regulation in high-risk applications like housing and banking. Serena spends her leisure time playing fetch with her dog, riding a tandem bicycle with her partner, skiing, or running."
+                     hometown = "Cambridge, UK & Memphis, TN"
                     photoPath={Serena} clashRoyaleImagePath={Witch}></StaffCard>
-                    
-                    <StaffCard name="Dog" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                </div>
+
+                <h3 className={`${staff_header_style}`}>Dog TAs</h3>
+                <div className={`${staff_subsection_style}`}>                    
+                    <StaffCard name="Dog" pronouns=""
+                    blurb=""  hometown = ""
                     photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>HTAs</h3>
                 <div className={`${staff_subsection_style}`}>
-                    <StaffCard name="Mehdi" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Mehdi" pronouns="he/him"
+                    blurb="Hi! I’m Mehdi, a junior double majoring in CS and Apma–Econ. When I’m not in the SciLi, you’ll most likely find me in the CIT. In my free time, I enjoy playing poker and building in Minecraft!" 
+                    hometown = "Casablanca, Morocco"
                     photoPath={Mehdi} clashRoyaleImagePath={Sparky}></StaffCard>
 
-                    <StaffCard name="Salman" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Salman"  pronouns="he/him"
+                    blurb="Hey! I'm Salman, and I'm a junior from Syria studying CS and APMA. In my free time, I love to play Minecraft, watch a sitcom (currently looking for one to watch next), or hike! Super excited to meet you all :)"
+                    hometown = "Latakia, Syria"
                     photoPath={Salman} clashRoyaleImagePath={Healer}></StaffCard>
                     
-                    <StaffCard name="Sarah" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Sarah"  pronouns="she/her"
+                    blurb="Hi! It's super nice to meet you all! I'm a junior studying CS, but you're more likely to find me in TFG 205 than the CIT." 
+                    hometown = "Solon, Ohio"
                     photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></StaffCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
                 <div className={`${staff_subsection_style}`}>
-                    <StaffCard name="Avery" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Avery"  pronouns="he/him"
+                    blurb="Hello! I’m a junior studying Computer Science from NJ. Outside of classes, I’m heavily involved in student theater, and am the co-chair of Musical Forum. I also currently work as a Bruno Fellow and a Tour Guide! In my free time, I love to sing, play games, get food with friends, and watch Survivor!"
+                    hometown = "East Hanover, New Jersey"
                     photoPath={Avery} clashRoyaleImagePath={Avery}></StaffCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>UTAs</h3>
                 <div className={`${staff_subsection_style}`}>
-                    <StaffCard name="Alex" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Alex"  pronouns="he/him"
+                    blurb="Hi! I'm Alex, and I'm a sophomore studying APMA and CS. In my free time I like to be active outside, listen to music, and watch sports. Excited to meet y'all!"
+                    hometown = "Shrewsbury, Massachusetts"
                     photoPath={Alex} clashRoyaleImagePath={Ebarbs}></StaffCard>
 
-                    <StaffCard name="Gun" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Gun"  pronouns=""
+                    blurb=""  hometown = ""
                     photoPath={Gun} clashRoyaleImagePath={Evo_furnace}></StaffCard>
                     
-                    <StaffCard name="John" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="John"  pronouns=""
+                    blurb="Hi! I'm a junior studying applied math and computer science. I like to swim, play piano, play video games, and listen to music."
+                    hometown = "Milford, Pennsylvania"
                     photoPath={John} clashRoyaleImagePath={Sus_bush}></StaffCard>
 
-                    <StaffCard name="Leanne" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Leanne"  pronouns="she/her"
+                    blurb="Hi! I'm Leanne, and I'm a junior studying CS and APMA-Econ. I really enjoy exploring new cafes, collecting vinyls, listening to music, and doing ballroom dance! :)"
+                    hometown = "Singapore"
                     photoPath={Leanne} clashRoyaleImagePath={Leanne}></StaffCard>
 
-                    <StaffCard name="Maddie" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Maddie"  pronouns="she/her"
+                    blurb="Hi! I am a sophomore from North Carolina studying APMA-CS. I love watching Arsenal games, snowboarding, hiking, puzzling, and going on side quests. Always feel free to reach out, I love yapping! I can’t wait to meet you!"
+                    hometown = "Winston-Salem, North Carolina "
                     photoPath={Maddie} clashRoyaleImagePath={Fire_cracker}></StaffCard>
 
-                    <StaffCard name="Matias" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Matias"  pronouns="he/him"
+                    blurb="Hello! I am a junior from Boise, Idaho! In my free time I play drums in some jazz groups and also I can juggle 😎"
+                    hometown = "Boise, Idaho"
                     photoPath={Matias} clashRoyaleImagePath={Elixir_golem}></StaffCard>
 
-                    <StaffCard name="Michael" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Michael"  pronouns="he/him"
+                    blurb="Hello! I'm a sophomore studying Applied Math and CS. In my free time, I like to play video  games and basketball badly. I also love watching F1, otters and Jayson Tatum."
+                    hometown = "Memphis, Tennessee"
                     photoPath={Michael} clashRoyaleImagePath={Royal_recruits}></StaffCard>
 
-                    <StaffCard name="Nico" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Nico"  pronouns="he/him"
+                    blurb="Hi, I'm Nico! I'm a current junior studying CS and physics. In my free time, I like to run, surf, hike, and drink strawberry milkshakes. I'm super excited to meet you all!"
+                    hometown = "San Francisco, California"
                     photoPath={Nico} clashRoyaleImagePath={Mini_peka}></StaffCard>
 
-                    <StaffCard name="Riley" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Riley"  pronouns="he/him"
+                    blurb="Hi, I'm Riley, a junior from New Jersey studying computer science. Outside of the classroom, I enjoy running, watching movies, and writing. Hope to see you all at office hours!"
+                    hometown = "East Windsor, New Jersey"
                     photoPath={Riley} clashRoyaleImagePath={Hog_rider}></StaffCard>
 
-                    <StaffCard name="Stephanie" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Stephanie"  pronouns="she/her"
+                    blurb="Hi everyone! I'm a junior studying Computer Science and Cognitive Science. Outside of class, you'll find me dancing with Fusion Dance Company, baking desserts, and trying new coffee shops with friends."
+                    hometown = "Newton, Massachusetts"
                     photoPath={Stephanie} clashRoyaleImagePath={Mega_knight}></StaffCard>
 
-                    <StaffCard name="Tyrone" cslogin="" pronouns=""
-                    blurb="" favCharacter = "" hometown = ""
+                    <StaffCard name="Tyrone"  pronouns="he/him"
+                    blurb="Hi! I’m a sophomore studying Computer Science and Economics. I like card tricks, climbing, and cookies. I’m really excited to meet you all!!"
+                    hometown = "San Juan, Philippines"
                     photoPath={Tyrone} clashRoyaleImagePath={Balloon}></StaffCard>
                 </div>
             </div>

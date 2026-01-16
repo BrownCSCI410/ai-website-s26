@@ -12,7 +12,7 @@ type StaffCardProps = {
     cslogin?: string;
     pronouns: string;
     blurb: string;
-    favCharacter: string;
+    favCharacter?: string;
     photoPath: StaticImageData;
     hometown: string;
     clashRoyaleImagePath: StaticImageData;
@@ -61,14 +61,13 @@ export default function StaffCard(props: StaffCardProps) {
             <br/>
             <br/>
             <br/>
-            <div className="border border-white/10 bg-black/40 rounded-[20px] p-3">
-                <p className="staff-name">
-                    {props.name} {props.cslogin ? `(${props.cslogin})` : ''}
-                </p>
+            <div className="max-w-xs border border-white/10 bg-black/40 rounded-[20px] p-3">
+                <p className="staff-name text-2xl font-bold">{props.name}</p>
                 <p className="pronouns">{props.pronouns}</p>
-                <p>{props.blurb}</p>
-                <p>Hometown: {props.hometown}</p>
-                <p>Favorite Clash Royale Card: {props.favCharacter}</p>
+                <br/>
+                <p className="text-sm">{props.blurb}</p>
+                <br/>
+                <p className="text-sm">Hometown: {props.hometown}</p>
             </div>
         </div>
     );
