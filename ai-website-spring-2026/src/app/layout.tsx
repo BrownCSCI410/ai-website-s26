@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CS Course",
-  description: "Course website",
+  title: "CS410: Foundations of AI and Machine Learning",
+  description: "Course website for CSCI 0410: Foundations of AI and Machine Learning",
 };
 
 
