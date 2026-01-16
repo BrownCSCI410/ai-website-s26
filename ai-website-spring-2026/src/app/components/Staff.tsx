@@ -81,7 +81,7 @@ export default function Staff() {
                     <StaffCard name="Avery"  pronouns="he/him"
                     blurb="Hello! I’m a junior studying Computer Science from NJ. Outside of classes, I’m heavily involved in student theater, and am the co-chair of Musical Forum. I also currently work as a Bruno Fellow and a Tour Guide! In my free time, I love to sing, play games, get food with friends, and watch Survivor!"
                     hometown = "East Hanover, New Jersey"
-                    photoPath={Avery} clashRoyaleImagePath={Avery}></StaffCard>
+                    photoPath={Avery} clashRoyaleImagePath={Mini_peka}></StaffCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>UTAs</h3>
