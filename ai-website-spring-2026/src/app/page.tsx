@@ -27,9 +27,14 @@ export default function HomePage() {
       <div className="relative z-20 mx-auto max-w-7xl px-6">
         
         {/* Top: hog rider mascot and course introduction */}
-        <Top/>
-        {/* SECTION 2: NEW CONTENT (Added below) */}
-        <Assignments/>
+        <section id="top">
+            <Top/>
+        </section>
+
+        {/* Assignments (homeworks and final project) */}
+        <section id="assignments">
+            <Assignments/>
+        </section>
 
       </div>
     </main>

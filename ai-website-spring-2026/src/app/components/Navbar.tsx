@@ -18,10 +18,10 @@ export default function Navbar() {
 
         {/* Nav links */}
         <nav className="flex gap-8 text-white font-medium">
-          <a href="#about" className="hover:text-pink-400 transition">About</a>
+          <a href="#top" className="hover:text-pink-400 transition">About</a>
+          <a href="#assignments" className="hover:text-pink-400 transition">Assignments</a>
           <a href="#staff" className="hover:text-pink-400 transition">Staff</a>
           <a href="#schedule" className="hover:text-pink-400 transition">Schedule</a>
-          <a href="#assignments" className="hover:text-pink-400 transition">Assignments</a>
         </nav>
 
       </div>
