@@ -1,26 +1,37 @@
+import { useState } from "react";
+import { useEffect } from "react";
+
 type assignmentProps = {
     assignmentName: string,
+    autoReleaseDate: string,
     outDate?: string,
     dueDate?: string
+    href?: string
 }
 
-function Assignment({assignmentName, outDate = "TBD", dueDate = "TBD"}: assignmentProps) {
+function Assignment({assignmentName, autoReleaseDate = "", outDate = "TBD", dueDate = "TBD"}: assignmentProps) {
+    const [released, setReleased] = useState(false);
+
+    useEffect(() => {
+        setReleased(shouldRelease(autoReleaseDate));
+    }, []);
+
     return (
         <tr className="hover:bg-white/5 transition-colors group">
-      <td className="px-6 py-4 font-medium text-white group-hover:text-yellow-200">
-        {assignmentName}
-      </td>
-      <td className="px-6 py-4 text-white/70 tabular-nums">
-        {outDate}
-      </td>
-      <td className="px-6 py-4 text-white/70 tabular-nums">
-        {dueDate}
-      </td>
-    </tr>
+        <td className="px-6 py-4 font-medium text-white group-hover:text-yellow-200">
+            {assignmentName}
+        </td>
+        <td className="px-6 py-4 text-white/70 tabular-nums">
+            {outDate}
+        </td>
+        <td className="px-6 py-4 text-white/70 tabular-nums">
+            {dueDate}
+        </td>
+        </tr>
     );
 }
 
-function shouldRelease(autoReleaseDate: string) {
+function shouldRelease(autoReleaseDate: string | undefined) {
     if (autoReleaseDate === undefined) {
         return true;
     }
@@ -72,6 +83,7 @@ export default function Assignments() {
                     />
                     <Assignment
                         assignmentName="Homework 4: SAT"
+                        autoReleaseDate=""
                         outDate="2/11"
                         dueDate="2/17"
                     />
