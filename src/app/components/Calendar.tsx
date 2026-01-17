@@ -1,4 +1,5 @@
 import React from 'react';
+import { PREFIX } from "./prefix";
 
 export default function CourseCalendar() {
     const CALENDAR_URL = "https://calendar.google.com/calendar/embed?src=c_01bfec7117962043525be2bce38a1f001fadcfcb2541bdd33d8a28c198ef3b2a%40group.calendar.google.com&ctz=America%2FNew_York";
@@ -10,7 +11,7 @@ export default function CourseCalendar() {
                 
                 {/* ----------------- TOP LEFT IMAGE ----------------- */}
                 <img 
-                    src="/Royal_Giant.png" // 🔴 Replace with your image
+                    src={`${PREFIX}Royal_Giant.png`}
                     alt="Calendar Decoration"
                     // 'bottom-full': Puts it on top of the box
                     // 'left-0': Aligns it to the LEFT side

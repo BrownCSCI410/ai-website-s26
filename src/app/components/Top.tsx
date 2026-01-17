@@ -65,7 +65,7 @@ export default function Top() {
               </p>
               <br/>
               <p className="text-base md:text-lg font-medium leading-relaxed opacity-90">
-                Instructor: Serena Booth
+                Instructor: Serena Booth and Amy Greenwald
               </p>
             </div>
           </div>

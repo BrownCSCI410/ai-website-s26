@@ -1,4 +1,5 @@
 import React from 'react';
+import { PREFIX } from "./prefix";
 
 type lectureProps = {
     lectureName: string,
@@ -82,7 +83,7 @@ export default function Lectures() {
                 - 'mb-[-1px]': Moves it down 1 pixel to ensure it "touches" perfectly without a gap.
             */}
             <img 
-                src="/peka_thumbs_up.png"  
+                src={`${PREFIX}peka_thumbs_up.png`}  
                 alt="Decoration"
                 className="absolute bottom-full right-0 w-80 h-auto object-contain mb-[-1px]" 
             />

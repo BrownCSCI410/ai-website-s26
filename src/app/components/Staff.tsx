@@ -1,6 +1,7 @@
 import StaffCard from "./StaffCard"
 import Image from "next/image";
 import { useRef } from "react";
+import { PREFIX } from "./prefix";
 
 import Dog from "../../../public/staff_photos/dog_card.png"
 import Serena from "../../../public/staff_photos/serena_card.png";
@@ -38,11 +39,6 @@ import Hog_rider from "../../../public/clash_cards/hog_rider_card.png";
 import Witch from "../../../public/clash_cards/witch_card.png";
 import Royal_recruits from "../../../public/clash_cards/royal_recruits_card.png";
 import Night_witch from "../../../public/clash_cards/night_witch_card.png";
-
-// Note: Ensure you have these imports if they were used in the original code, 
-// otherwise keep your existing imports.
-// import Skeleton from "../../../public/skeleton.png"; 
-// import Ballooon from "../../../public/Balloon_red.webp"; 
 
 
 export default function Staff() {
@@ -99,7 +95,7 @@ export default function Staff() {
                         title="clang"
                     >      
                         <Image
-                            src= "/new_skel.png"
+                            src={`${PREFIX}new_skel.png`}
                             alt="skeleton" 
                             className="skeleton translate-y-50 translate-x-25"                        
                             width = {250} 
@@ -117,7 +113,7 @@ export default function Staff() {
                     {/* RIGHT IMAGE: Added 'hidden lg:block' to hide balloon on mobile/tablet */}
                     <div className="hidden lg:block">
                         <Image
-                            src= "/Balloon_red.webp"
+                            src={`${PREFIX}Balloon_red.webp`}
                             alt="Balloon" 
                             className="balloon -translate-y-70"
                             width = {500} 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { PREFIX } from "./prefix";
 
 type DiscussionProps = {
     topic: string;
@@ -53,7 +54,7 @@ export default function Discussions() {
                 
                 {/* === TOP LEFT IMAGE === */}
                 <img 
-                    src="/archer.png"  // 🔴 Replace with actual path
+                    src={`${PREFIX}archer.png`}
                     alt="Left Decoration"
                     // 'left-0' aligns it to the left edge
                     className="absolute bottom-full left-0 w-32 h-auto object-contain mb-[-1px]" 
@@ -61,7 +62,7 @@ export default function Discussions() {
 
                 {/* === TOP RIGHT IMAGE === */}
                 <img 
-                    src="/goblin_running.png" // 🔴 Replace with actual path
+                    src={`${PREFIX}goblin_running.png`}
                     alt="Right Decoration"
                     // 'right-0' aligns it to the right edge
                     className="absolute bottom-full right-20 w-50 h-auto object-contain mb-[-1px]" 

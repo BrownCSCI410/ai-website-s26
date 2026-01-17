@@ -1,4 +1,5 @@
 "use client"; // <--- 1. Required for interactivity (useState)
+import { PREFIX } from "./prefix";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -17,7 +18,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center gap-3">
           <Image
-            src="/logop.png"
+            src={`${PREFIX}logop.png`}
             alt="Course Logo"
             width={200}
             height={200}

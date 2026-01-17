@@ -1,4 +1,5 @@
 import React from 'react';
+import { PREFIX } from "./prefix";
 
 type resourceProps = {
     resourceName: string
@@ -26,14 +27,14 @@ export default function Resources() {
                 
                 {/* === TOP LEFT IMAGE === */}
                 <img 
-                    src="/kings_clapping.png" 
+                    src={`${PREFIX}kings_clapping.png`} 
                     alt="Left Decoration"
                     className="hidden md:block absolute bottom-full left-0 w-72 h-auto object-contain mb-[-1px] translate-y-60" 
                 />
 
                 {/* === TOP RIGHT IMAGE === */}
                 <img 
-                    src="/kings_cheering.png" 
+                    src={`${PREFIX}kings_cheering.png`}
                     alt="Right Decoration"
                     className="hidden md:block absolute bottom-full right-0 w-72 h-auto object-contain mb-[-1px] translate-y-64" 
                 />
