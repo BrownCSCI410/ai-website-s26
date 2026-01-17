@@ -90,6 +90,10 @@ export default function Staff() {
                         <StaffCard name="Dog" pronouns=""
                         blurb="Woof"  hometown = "Woof"
                         photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
+
+                        <StaffCard name="Dog2" pronouns=""
+                        blurb="Bark"  hometown = "Woof"
+                        photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
                     </div>
 
                 
@@ -111,7 +115,7 @@ export default function Staff() {
                     hometown = "Solon, Ohio"
                     photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></HTACard>
                 </div>
-                <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
+                <h3 className={`${staff_header_style}`}>Joint STA/UTA</h3>
 
                 {/* WRAPPER: Added relative positioning and responsive handling for side images */}
                 <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4 relative">
