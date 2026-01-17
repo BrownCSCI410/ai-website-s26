@@ -18,17 +18,6 @@ type StaffCardProps = {
     clashRoyaleImagePath: StaticImageData;
 }
 
-type ProfCardProps = {
-    name: string;
-    cslogin?: string;
-    pronouns: string;
-    blurb: string;
-    favCharacter?: string;
-    photoPath: StaticImageData;
-    hometown: string;
-    clashRoyaleImagePath: StaticImageData;
-}
-
 export class FlipCard extends React.Component<FlipCardProps> {
   render() {
     const styles = {
@@ -84,9 +73,28 @@ export function StaffCard(props: StaffCardProps) {
     );
 }
 
-export function ProfCard(props: ProfCardProps) {
+export function ProfCard(props: StaffCardProps) {
     return (
-        <div className="min-h-[750px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
+        <div className="min-h-[900px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
+            <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
+            <br/>
+            <br/>
+            <br/>
+            <div className="max-w-xs border border-white/10 bg-black/40 rounded-[20px] p-3">
+                <p className="staff-name text-2xl font-bold">{props.name}</p>
+                <p className="pronouns">{props.pronouns}</p>
+                <br/>
+                <p className="text-sm">{props.blurb}</p>
+                <br/>
+                <p className="text-sm">Hometown: {props.hometown}</p>
+            </div>
+        </div>
+    );
+}
+
+export function HTACard(props: StaffCardProps) {
+    return (
+        <div className="min-h-[600px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
             <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
             <br/>
             <br/>

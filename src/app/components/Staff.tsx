@@ -1,4 +1,4 @@
-import { StaffCard, ProfCard } from "./StaffCard"
+import { StaffCard, ProfCard, HTACard } from "./StaffCard"
 import Image from "next/image";
 import { useRef } from "react";
 import { PREFIX } from "./prefix";
@@ -125,20 +125,20 @@ export default function Staff() {
 
                 <h3 className={`${staff_header_style}`}>HTAs</h3>
                 <div className={`${staff_subsection_style}`}>
-                    <ProfCard name="Mehdi" pronouns="he/him"
+                    <HTACard name="Mehdi" pronouns="he/him"
                     blurb="Hi! I’m Mehdi, a junior double majoring in CS and Apma–Econ. When I’m not in the SciLi, you’ll most likely find me in the CIT. In my free time, I enjoy playing poker and building in Minecraft!" 
                     hometown = "Casablanca, Morocco"
-                    photoPath={Mehdi} clashRoyaleImagePath={Sparky}></ProfCard>
+                    photoPath={Mehdi} clashRoyaleImagePath={Sparky}></HTACard>
 
-                    <ProfCard name="Salman"  pronouns="he/him"
+                    <HTACard name="Salman"  pronouns="he/him"
                     blurb="Hey! I'm Salman, and I'm a junior from Syria studying CS and APMA. In my free time, I love to play Minecraft, watch a sitcom (currently looking for one to watch next), or hike! Super excited to meet you all :)"
                     hometown = "Latakia, Syria"
-                    photoPath={Salman} clashRoyaleImagePath={Healer}></ProfCard>
+                    photoPath={Salman} clashRoyaleImagePath={Healer}></HTACard>
                     
-                    <ProfCard name="Sarah"  pronouns="she/her"
+                    <HTACard name="Sarah"  pronouns="she/her"
                     blurb="Hi! It's super nice to meet you all! I'm a junior studying CS, but you're more likely to find me in TFG 205 than the CIT." 
                     hometown = "Solon, Ohio"
-                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></ProfCard>
+                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></HTACard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
