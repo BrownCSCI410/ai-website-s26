@@ -53,7 +53,7 @@ export default function Staff() {
       
     const playSound = () => {
         if (!audioRef.current) {
-        audioRef.current = new Audio("/clang.mp3");
+        audioRef.current = new Audio(`${PREFIX}clang.mp3`);
         }
     
         audioRef.current.currentTime = 0; 

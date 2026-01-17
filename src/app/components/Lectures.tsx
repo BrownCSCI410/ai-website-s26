@@ -1,5 +1,5 @@
-import React from 'react';
 import { PREFIX } from "./prefix";
+import React from 'react';
 
 type lectureProps = {
     lectureName: string,
@@ -58,10 +58,11 @@ function Lecture({lectureName, date}: lectureProps) {
     const isNoClass = lectureName === "No Class";
     return (
         <tr className={`hover:bg-white/5 transition-colors group ${isNoClass ? 'opacity-40' : ''}`}>
-            <td className="px-6 py-4 font-medium text-white group-hover:text-yellow-200">
+            {/* Reduced padding for mobile (px-3), normal for desktop (md:px-6) */}
+            <td className="px-3 md:px-6 py-4 font-medium text-white group-hover:text-yellow-200">
                 {lectureName}
             </td>
-            <td className="px-6 py-4 text-white/70 tabular-nums text-right whitespace-nowrap">
+            <td className="px-3 md:px-6 py-4 text-white/70 tabular-nums text-right whitespace-nowrap">
                 {date}
             </td>
         </tr>
@@ -71,44 +72,43 @@ function Lecture({lectureName, date}: lectureProps) {
 export default function Lectures() {
     return (
         <section className="py-20">
-          {/* 1. Added 'relative' to this container so the image sticks to it. 
-              (The rest of your classes remain the same) 
-          */}
-          <div className="relative p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm">
+          {/* 1. Responsive padding (p-4 md:p-10) and overflow handling */}
+          <div className="relative p-4 md:p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden md:overflow-visible">
             
-            {/* ----------------- YOUR IMAGE ----------------- */}
-            {/* - 'absolute': Allows us to position it anywhere relative to the box.
-                - 'bottom-full': Sits the image exactly on top of the border.
-                - 'right-0': Aligns it to the right edge.
-                - 'mb-[-1px]': Moves it down 1 pixel to ensure it "touches" perfectly without a gap.
+            {/* 2. Added 'hidden md:block' 
+                The w-80 image is too large for mobile screens, so we hide it 
+                on small devices and show it on medium (md) and up. 
             */}
             <img 
-                src={`${PREFIX}peka_thumbs_up.png`}  
+                src={`${PREFIX}peka_thumbs_up.png`}
                 alt="Decoration"
-                className="absolute bottom-full right-0 w-80 h-auto object-contain mb-[-1px]" 
+                className="hidden md:block absolute bottom-full right-0 w-80 h-auto object-contain mb-[-1px]" 
             />
-            {/* ---------------------------------------------- */}
 
-            <h3 className="text-3xl font-bold mb-6 text-center text-white">Lectures</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-white">Lectures</h3>
             
-            <table className="w-full text-left border-collapse">
-                <thead>
-                    <tr className="border-b border-white/20 bg-white/5">
-                        <th className="px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm">Lecture</th>
-                        <th className="px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm text-right">Date</th>
-                    </tr>
-                </thead>
+            {/* 3. Horizontal Scroll Wrapper */}
+            <div className="w-full overflow-x-auto">
+                <table className="w-full text-left border-collapse min-w-[300px]">
+                    <thead>
+                        <tr className="border-b border-white/20 bg-white/5">
+                            {/* Adjusted padding on headers */}
+                            <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm">Lecture</th>
+                            <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm text-right">Date</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    {LECTURE_DATA.map((item, index) => (
-                        <Lecture
-                            key={`${item.date}-${index}`}
-                            lectureName={item.name}
-                            date={item.date}
-                        />
-                    ))}
-                </tbody>
-            </table>
+                    <tbody>
+                        {LECTURE_DATA.map((item, index) => (
+                            <Lecture
+                                key={`${item.date}-${index}`}
+                                lectureName={item.name}
+                                date={item.date}
+                            />
+                        ))}
+                    </tbody>
+                </table>
+            </div>
           </div>
         </section>
     );
