@@ -1,4 +1,4 @@
-import StaffCard from "./StaffCard"
+import { StaffCard, ProfCard } from "./StaffCard"
 import Image from "next/image";
 import { useRef } from "react";
 import { PREFIX } from "./prefix";
@@ -71,15 +71,16 @@ export default function Staff() {
                 <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
                    
                     <div className={`${staff_subsection_style}`}>
-                        <StaffCard name="Serena Booth (Professor)" pronouns="she/her/hers"
+                        <ProfCard name="Serena Booth" pronouns="she/her/hers"
                         blurb="Serena a (new) Assistant Professor in Computer Science at Brown University. At Brown, she leads the GIRAFFE Lab, where she and her students work on questions specification, governance, and interaction for AI systems and robots. After finishing her PhD at MIT in 2023, Serena worked in the U.S. Senate as an AI policy advisor to advance U.S. AI regulation in high-risk applications like housing and banking. Serena spends her leisure time playing fetch with her dog, riding a tandem bicycle with her partner, skiing, or running."
                         hometown = "Cambridge, UK & Memphis, TN"
-                        photoPath={Serena} clashRoyaleImagePath={Witch}></StaffCard>
+                        photoPath={Serena} clashRoyaleImagePath={Witch}></ProfCard>
                    
-                        <StaffCard name="Amy Greenwald (Professor)" pronouns="she/her/hers"
+                        <ProfCard name="Amy Greenwald" pronouns="she/her/hers"
                         blurb = "My research is aimed at building AI agents that make effective decisions in multi-agent—part human, part artificial—environments. The bulk of my efforts have been in service of perfecting market designs, with applications ranging from renewable energy markets to online ad exchanges to wireless spectrum auctions."
                         hometown = "Providence, RI"
-                        photoPath={Amy} clashRoyaleImagePath={Night_witch}></StaffCard>
+                        photoPath={Amy} clashRoyaleImagePath={Night_witch}
+                        extraSpaces={5}></ProfCard>
                     </div>
                 </div>
 
@@ -106,7 +107,7 @@ export default function Staff() {
                     
                     <div className={`${staff_subsection_style}`}>                    
                         <StaffCard name="Dog" pronouns=""
-                        blurb=""  hometown = ""
+                        blurb="Woof"  hometown = "Woof"
                         photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
                     </div>
 
@@ -125,20 +126,21 @@ export default function Staff() {
 
                 <h3 className={`${staff_header_style}`}>HTAs</h3>
                 <div className={`${staff_subsection_style}`}>
-                    <StaffCard name="Mehdi" pronouns="he/him"
+                    <ProfCard name="Mehdi" pronouns="he/him"
                     blurb="Hi! I’m Mehdi, a junior double majoring in CS and Apma–Econ. When I’m not in the SciLi, you’ll most likely find me in the CIT. In my free time, I enjoy playing poker and building in Minecraft!" 
                     hometown = "Casablanca, Morocco"
-                    photoPath={Mehdi} clashRoyaleImagePath={Sparky}></StaffCard>
+                    photoPath={Mehdi} clashRoyaleImagePath={Sparky}></ProfCard>
 
-                    <StaffCard name="Salman"  pronouns="he/him"
+                    <ProfCard name="Salman"  pronouns="he/him"
                     blurb="Hey! I'm Salman, and I'm a junior from Syria studying CS and APMA. In my free time, I love to play Minecraft, watch a sitcom (currently looking for one to watch next), or hike! Super excited to meet you all :)"
                     hometown = "Latakia, Syria"
-                    photoPath={Salman} clashRoyaleImagePath={Healer}></StaffCard>
+                    photoPath={Salman} clashRoyaleImagePath={Healer}></ProfCard>
                     
-                    <StaffCard name="Sarah"  pronouns="she/her"
+                    <ProfCard name="Sarah"  pronouns="she/her"
                     blurb="Hi! It's super nice to meet you all! I'm a junior studying CS, but you're more likely to find me in TFG 205 than the CIT." 
                     hometown = "Solon, Ohio"
-                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></StaffCard>
+                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}
+                    extraSpaces={2}></ProfCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
