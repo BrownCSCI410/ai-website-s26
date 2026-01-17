@@ -30,22 +30,22 @@ export default function Resources() {
 
                 <h2 className={`${resourceGroupHeaderStyle}`}>General Resources</h2>
                 <div className={`${resourceGroupStyle}`}>
-                    <Resource resourceName="Ed Discussion" href=""/>
-                    <Resource resourceName="Github Overview" href=""/>
-                    <Resource resourceName="Testing/Debugging Guide" href=""/>
+                    <Resource resourceName="Ed Discussion" href="https://edstem.org/us/courses/93617/discussion"/>
+                    <Resource resourceName="Github Overview" href="https://hackmd.io/@cs410/ry3PhMEtC"/>
+                    <Resource resourceName="Testing/Debugging Guide" href="https://hackmd.io/@cs410/SyDy2CVnA"/>
                 </div>
 
                 <h2 className={`${resourceGroupHeaderStyle}`}>Python Guides</h2>
                 <div className={`${resourceGroupStyle}`}>
-                    <Resource resourceName="Python Installation and Setup" href=""/>
-                    <Resource resourceName="Python, NumPy, & Linear Algebra Guide" href=""/>
-                    <Resource resourceName="NumPy Cheatsheet" href=""/>
-                    <Resource resourceName="Python Style Guide" href=""/>
+                    <Resource resourceName="Python Installation and Setup" href="https://hackmd.io/@cs410/BJvhqHXuR"/>
+                    <Resource resourceName="Python, NumPy, & Linear Algebra Guide" href="https://csci1410-2023.vercel.app/static/media/python_numpy_guide.f0074ca121c542ff1c29.pdf"/>
+                    <Resource resourceName="NumPy Cheatsheet" href="https://drive.google.com/file/d/1ROnkNuHgthapJIXYJBtx1W_WYHfHBKfQ/view"/>
+                    <Resource resourceName="Python Style Guide" href="https://hackmd.io/@cs410/BJDNYaUKA"/>
                 </div>
 
                 <h2 className={`${resourceGroupHeaderStyle}`}>Forms</h2>
                 <div className={`${resourceGroupStyle}`}>
-                    <Resource resourceName="Course Onboarding Form" href=""/>
+                    <Resource resourceName="Course Onboarding Form" href="https://docs.google.com/forms/d/e/1FAIpQLSceHCYVQGeARm-ylTWtCq_gDJC-g2R2YGfacZyq9mNWiakhBA/viewform"/>
                 </div>
             </div>
         </section>
