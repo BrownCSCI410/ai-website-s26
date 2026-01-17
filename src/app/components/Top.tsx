@@ -8,7 +8,7 @@ export default function Top() {
   
     const playSound = () => {
       if (!audioRef.current) {
-        audioRef.current = new Audio(`${PREFIX}/hog_rider_sound.mp3`);
+        audioRef.current = new Audio(`${PREFIX}hog_rider_sound.mp3`);
       }
   
       audioRef.current.currentTime = 0; // rewind if spam-clicked
@@ -29,7 +29,7 @@ export default function Top() {
               >
               
               <Image
-                src={`${PREFIX}/clash_cards/hog_rider_with_feet_no_bg.png`}
+                src={`${PREFIX}clash_cards/hog_rider_with_feet_no_bg.png`}
                 alt="Course mascot"
                 width={380}
                 height={380}
@@ -45,7 +45,7 @@ export default function Top() {
             >
               <div className="mb-4">
                 <Image
-                  src={`${PREFIX}/logop.png`}
+                  src={`${PREFIX}logop.png`}
                   alt="course logo"
                   width={380}
                   height={100} // Increased height slightly to avoid squishing
