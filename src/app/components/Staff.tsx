@@ -111,6 +111,8 @@ export default function Staff() {
                     hometown = "Solon, Ohio"
                     photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></HTACard>
                 </div>
+                <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
+
                 {/* WRAPPER: Added relative positioning and responsive handling for side images */}
                 <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4 relative">
                     
@@ -131,7 +133,6 @@ export default function Staff() {
                     </div>
                     
 
-                    <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
                     <div className={`${staff_subsection_style}`}>
                         <StaffCard name="Avery"  pronouns="he/him"
                         blurb="Hello! I’m a junior studying Computer Science from NJ. Outside of classes, I’m heavily involved in student theater, and am the co-chair of Musical Forum. I also currently work as a Bruno Fellow and a Tour Guide! In my free time, I love to sing, play games, get food with friends, and watch Survivor!"
