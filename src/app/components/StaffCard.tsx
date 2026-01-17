@@ -75,7 +75,7 @@ export function StaffCard(props: StaffCardProps) {
 
 export function ProfCard(props: StaffCardProps) {
     return (
-        <div className="min-h-[850px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
+        <div className="min-h-[825px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
             <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
             <br/>
             <br/>
@@ -94,7 +94,7 @@ export function ProfCard(props: StaffCardProps) {
 
 export function HTACard(props: StaffCardProps) {
     return (
-        <div className="min-h-[650px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
+        <div className="min-h-[675px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
             <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
             <br/>
             <br/>
