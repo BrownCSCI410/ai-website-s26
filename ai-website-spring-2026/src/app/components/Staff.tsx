@@ -101,9 +101,9 @@ export default function Staff() {
                         <Image
                             src= "/new_skel.png"
                             alt="skeleton" 
-                            className="skeleton translate-y-50"                        
-                            width = {300} 
-                            height = {500}
+                            className="skeleton translate-y-50 translate-x-25"                        
+                            width = {250} 
+                            height = {400}
                             priority
                         />
                     </div>
@@ -119,9 +119,9 @@ export default function Staff() {
                         <Image
                             src= "/Balloon_red.webp"
                             alt="Balloon" 
-                            className="balloon -translate-y-50"
-                            width = {600} 
-                            height = {900}
+                            className="balloon -translate-y-70"
+                            width = {500} 
+                            height = {600}
                         />
                     </div>
                     
@@ -164,7 +164,7 @@ export default function Staff() {
                     blurb=""  hometown = ""
                     photoPath={Gun} clashRoyaleImagePath={Evo_furnace}></StaffCard>
                     
-                    <StaffCard name="John"  pronouns=""
+                    <StaffCard name="John"  pronouns="he/him"
                     blurb="Hi! I'm a junior studying applied math and computer science. I like to swim, play piano, play video games, and listen to music."
                     hometown = "Milford, Pennsylvania"
                     photoPath={John} clashRoyaleImagePath={Sus_bush}></StaffCard>

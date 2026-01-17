@@ -9,6 +9,10 @@ type assignmentProps = {
     href?: string
 }
 
+/**
+ * Determines whether an assignment should appear as released
+ * based on its autoReleaseDate and the current date. 
+ */
 function shouldRelease(autoReleaseDate: string | undefined) {
     if (autoReleaseDate === undefined) {
         return true;
@@ -25,6 +29,9 @@ function shouldRelease(autoReleaseDate: string | undefined) {
     return nowEST > new Date(autoReleaseDate);
 }
 
+/**
+ * One row in the table of assignments
+ */
 function Assignment({assignmentName, autoReleaseDate = "", outDate = "TBD", dueDate = "TBD", href}: assignmentProps) {
     const [released, setReleased] = useState(false);
 
@@ -35,7 +42,7 @@ function Assignment({assignmentName, autoReleaseDate = "", outDate = "TBD", dueD
     if (released && href) {
         return (
             <tr className="hover:bg-white/5 transition-colors group">
-            <td className="px-6 py-4 font-medium text-yellow-400 underline group-hover:text-blue-400">
+            <td className="px-6 py-4 font-medium text-yellow-400 underline decoration-yellow-400/30 hover:decoration-blue-300/30 group-hover:text-blue-400">
                 <a href={href} target="_blank" rel="noopener noreferrer">
                     {assignmentName}
                 </a>
@@ -65,6 +72,10 @@ function Assignment({assignmentName, autoReleaseDate = "", outDate = "TBD", dueD
     }
 }
 
+/**
+ * The assignments section. For each assignment, shows the name (and hyperlink if released),
+ * out date, and due date.
+ */
 export default function Assignments() {
     return (
         <section className="py-20">
@@ -164,20 +175,20 @@ export default function Assignments() {
                         assignmentName="Final Project Part 1"
                         autoReleaseDate="Apr 22, 2026 14:00:00 EDT"
                         outDate="4/22"
-                        dueDate="TBD"
+                        dueDate="5/4"
                         href="https://hackmd.io/lp701aRlRCqmmRS3Atvewg"
                     />
                     <Assignment
                         assignmentName="Final Project Part 2"
-                        autoReleaseDate=""
-                        outDate="TBD"
-                        dueDate="TBD"
+                        autoReleaseDate="Apr 22, 2026 14:00:00 EDT"
+                        outDate="4/22"
+                        dueDate="5/4"
                         href="https://hackmd.io/B8BCfBV1QS-vxshLq3e3RQ"
                     />
                     <Assignment
                         assignmentName="Final Project Part 3"
-                        autoReleaseDate=""
-                        outDate="TBD"
+                        autoReleaseDate="Apr 22, 2026 14:00:00 EDT"
+                        outDate="4/22"
                         dueDate="5/4"
                         href="https://hackmd.io/dIgJakLUSnaUtFIrQmdS9Q"
                     />

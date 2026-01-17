@@ -35,6 +35,9 @@ export default function Navbar() {
           <a href="#lectures" className="hover:text-pink-400 transition">Lectures</a>
           <a href="#calendar" className="hover:text-pink-400 transition">Hours</a>
           <a href="#discussion" className="hover:text-pink-400 transition">Discussion</a>
+          <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
+
+
         </nav>
 
         {/* --- HAMBURGER BUTTON --- 
@@ -71,6 +74,8 @@ export default function Navbar() {
             <a href="#lectures" onClick={closeMenu} className="hover:text-pink-400 transition">Lectures</a>
             <a href="#calendar" onClick={closeMenu} className="hover:text-pink-400 transition">Hours</a>
             <a href="#discussion" onClick={closeMenu} className="hover:text-pink-400 transition">Discussion</a>
+            <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
+
           </nav>
         </div>
       )}
