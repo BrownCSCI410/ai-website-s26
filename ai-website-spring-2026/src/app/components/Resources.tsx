@@ -21,7 +21,7 @@ export default function Resources() {
     return (
         <section className="py-20">
             <div className="p-10 rounded-[26px] border border-white/10 bg-blue-900/60 backdrop-blur-sm">
-                <h3 className="text-3xl font-bold mb-2 text-center text-white">Resources</h3>
+                <h3 className="text-3xl font-bold mb-2 text-center text-white p-4 rounded-[20px] border border-white/10 bg-black/40 backdrop-blur-sm">Resources</h3>
 
                 <h2 className={`${resourceGroupHeaderStyle}`}>Course Policies</h2>
                 <div className={`${resourceGroupStyle}`}>
