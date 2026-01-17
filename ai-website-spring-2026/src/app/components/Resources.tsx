@@ -1,3 +1,5 @@
+import React from 'react';
+
 type resourceProps = {
     resourceName: string
     href: string
@@ -20,7 +22,23 @@ export default function Resources() {
 
     return (
         <section className="py-20">
-            <div className="p-10 rounded-[26px] border border-white/10 bg-blue-900/60 backdrop-blur-sm">
+            {/* 1. Added 'relative' to the container so the images stick to it */}
+            <div className="relative p-10 rounded-[26px] border border-white/10 bg-blue-900/60 backdrop-blur-sm">
+                
+                {/* === TOP LEFT IMAGE === */}
+                <img 
+                    src="/kings_clapping.png" // 🔴 Replace with actual path
+                    alt="Left Decoration"
+                    className="absolute bottom-full left-0 w-70 h-auto object-contain mb-[-1px] translate-y-60" 
+                />
+
+                {/* === TOP RIGHT IMAGE === */}
+                <img 
+                    src="/kings_cheering.png" // 🔴 Replace with actual path
+                    alt="Right Decoration"
+                    className="absolute bottom-full right-0 w-70 h-auto object-contain mb-[-1px] translate-y-64" 
+                />
+                
                 <h3 className="text-3xl font-bold mb-2 text-center text-white">Resources</h3>
 
                 <h2 className={`${resourceGroupHeaderStyle}`}>Course Policies</h2>
