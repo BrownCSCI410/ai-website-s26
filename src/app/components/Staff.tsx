@@ -85,6 +85,32 @@ export default function Staff() {
 
                 <h3 className={`${staff_header_style}`}>Dog TAs</h3>
                 
+                
+                    <div className={`${staff_subsection_style}`}>                    
+                        <StaffCard name="Dog" pronouns=""
+                        blurb="Woof"  hometown = "Woof"
+                        photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
+                    </div>
+
+                
+
+                <h3 className={`${staff_header_style}`}>HTAs</h3>
+                <div className={`${staff_subsection_style}`}>
+                    <HTACard name="Mehdi" pronouns="he/him"
+                    blurb="Hi! I’m Mehdi, a junior double majoring in CS and Apma–Econ. When I’m not in the SciLi, you’ll most likely find me in the CIT. In my free time, I enjoy playing poker and building in Minecraft!" 
+                    hometown = "Casablanca, Morocco"
+                    photoPath={Mehdi} clashRoyaleImagePath={Sparky}></HTACard>
+
+                    <HTACard name="Salman"  pronouns="he/him"
+                    blurb="Hey! I'm Salman, and I'm a junior from Syria studying CS and APMA. In my free time, I love to play Minecraft, watch a sitcom (currently looking for one to watch next), or hike! Super excited to meet you all :)"
+                    hometown = "Latakia, Syria"
+                    photoPath={Salman} clashRoyaleImagePath={Healer}></HTACard>
+                    
+                    <HTACard name="Sarah"  pronouns="she/her"
+                    blurb="Hi! It's super nice to meet you all! I'm a junior studying CS, but you're more likely to find me in TFG 205 than the CIT." 
+                    hometown = "Solon, Ohio"
+                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></HTACard>
+                </div>
                 {/* WRAPPER: Added relative positioning and responsive handling for side images */}
                 <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4 relative">
                     
@@ -104,10 +130,13 @@ export default function Staff() {
                         />
                     </div>
                     
-                    <div className={`${staff_subsection_style}`}>                    
-                        <StaffCard name="Dog" pronouns=""
-                        blurb="Woof"  hometown = "Woof"
-                        photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
+
+                    <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
+                    <div className={`${staff_subsection_style}`}>
+                        <StaffCard name="Avery"  pronouns="he/him"
+                        blurb="Hello! I’m a junior studying Computer Science from NJ. Outside of classes, I’m heavily involved in student theater, and am the co-chair of Musical Forum. I also currently work as a Bruno Fellow and a Tour Guide! In my free time, I love to sing, play games, get food with friends, and watch Survivor!"
+                        hometown = "East Hanover, New Jersey"
+                        photoPath={Avery} clashRoyaleImagePath={Mini_peka}></StaffCard>
                     </div>
 
                     {/* RIGHT IMAGE: Added 'hidden lg:block' to hide balloon on mobile/tablet */}
@@ -121,32 +150,6 @@ export default function Staff() {
                         />
                     </div>
                     
-                </div>
-
-                <h3 className={`${staff_header_style}`}>HTAs</h3>
-                <div className={`${staff_subsection_style}`}>
-                    <HTACard name="Mehdi" pronouns="he/him"
-                    blurb="Hi! I’m Mehdi, a junior double majoring in CS and Apma–Econ. When I’m not in the SciLi, you’ll most likely find me in the CIT. In my free time, I enjoy playing poker and building in Minecraft!" 
-                    hometown = "Casablanca, Morocco"
-                    photoPath={Mehdi} clashRoyaleImagePath={Sparky}></HTACard>
-
-                    <HTACard name="Salman"  pronouns="he/him"
-                    blurb="Hey! I'm Salman, and I'm a junior from Syria studying CS and APMA. In my free time, I love to play Minecraft, watch a sitcom (currently looking for one to watch next), or hike! Super excited to meet you all :)"
-                    hometown = "Latakia, Syria"
-                    photoPath={Salman} clashRoyaleImagePath={Healer}></HTACard>
-                    
-                    <HTACard name="Sarah"  pronouns="she/her"
-                    blurb="Hi! It's super nice to meet you all! I'm a junior studying CS, but you're more likely to find me in TFG 205 than the CIT." 
-                    hometown = "Solon, Ohio"
-                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></HTACard>
-                </div>
-
-                <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
-                <div className={`${staff_subsection_style}`}>
-                    <StaffCard name="Avery"  pronouns="he/him"
-                    blurb="Hello! I’m a junior studying Computer Science from NJ. Outside of classes, I’m heavily involved in student theater, and am the co-chair of Musical Forum. I also currently work as a Bruno Fellow and a Tour Guide! In my free time, I love to sing, play games, get food with friends, and watch Survivor!"
-                    hometown = "East Hanover, New Jersey"
-                    photoPath={Avery} clashRoyaleImagePath={Mini_peka}></StaffCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>UTAs</h3>
