@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     reactCompiler: true,
     output: 'export',
     images: {
-        unoptimized: true
+        unoptimized: false
     },
     basePath: '/ai-website-s26'
 };
