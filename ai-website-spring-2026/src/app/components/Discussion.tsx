@@ -6,7 +6,6 @@ type DiscussionProps = {
     slidesLink?: string;
 }
 
-// UPDATE the "link" fields below with actual PDF/Slide URLs
 const DISCUSSION_DATA = [
     { topic: "Ai Policy", date: "2/2 - 2/6", link: "#" },
     { topic: "HW 1 and 2", date: "2/9 - 2/13", link: "#" },
@@ -22,12 +21,9 @@ const DISCUSSION_DATA = [
 function DiscussionRow({ topic, date, slidesLink }: DiscussionProps) {
     return (
         <tr className="hover:bg-white/5 transition-colors group">
-            {/* Column 1: Topic */}
             <td className="px-6 py-4 font-medium text-white group-hover:text-yellow-200">
                 {topic}
             </td>
-            
-            {/* Column 2: Slides (Clickable) */}
             <td className="px-6 py-4 text-white/70">
                 {slidesLink ? (
                     <a 
@@ -42,8 +38,6 @@ function DiscussionRow({ topic, date, slidesLink }: DiscussionProps) {
                     <span className="opacity-50 cursor-not-allowed">Slides</span>
                 )}
             </td>
-
-            {/* Column 3: Date */}
             <td className="px-6 py-4 text-white/70 tabular-nums text-right whitespace-nowrap">
                 {date}
             </td>
@@ -54,8 +48,25 @@ function DiscussionRow({ topic, date, slidesLink }: DiscussionProps) {
 export default function Discussions() {
     return (
         <section className="py-20">
-            {/* Container matching Lectures.tsx style */}
-            <div className="p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm">
+            {/* 1. Added 'relative' to this container so images stick to it */}
+            <div className="relative p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm">
+                
+                {/* === TOP LEFT IMAGE === */}
+                <img 
+                    src="/archer.png"  // 🔴 Replace with actual path
+                    alt="Left Decoration"
+                    // 'left-0' aligns it to the left edge
+                    className="absolute bottom-full left-0 w-32 h-auto object-contain mb-[-1px]" 
+                />
+
+                {/* === TOP RIGHT IMAGE === */}
+                <img 
+                    src="/goblin_running.png" // 🔴 Replace with actual path
+                    alt="Right Decoration"
+                    // 'right-0' aligns it to the right edge
+                    className="absolute bottom-full right-20 w-50 h-auto object-contain mb-[-1px]" 
+                />
+
                 <h3 className="text-3xl font-bold mb-6 text-center text-white">Discussion Sections</h3>
                 
                 <table className="w-full text-left border-collapse">

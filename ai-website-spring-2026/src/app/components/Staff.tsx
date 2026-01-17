@@ -2,8 +2,6 @@ import StaffCard from "./StaffCard"
 import Image from "next/image";
 import { useRef } from "react";
 
-
-
 import Dog from "../../../public/staff_photos/dog_card.png"
 import Serena from "../../../public/staff_photos/serena_card.png";
 import Mehdi from "../../../public/staff_photos/mehdi_card.png";
@@ -21,6 +19,8 @@ import Nico from "../../../public/staff_photos/nico_card.png";
 import Riley from "../../../public/staff_photos/riley_card.png";
 import Stephanie from "../../../public/staff_photos/stephanie_card.png";
 import Tyrone from "../../../public/staff_photos/tyrone_card.png";
+import Amy from "../../../public/staff_photos/amy_card.png";
+
 
 import Ebarbs from "../../../public/clash_cards/ebarbs_card.png";
 import Fire_cracker from "../../../public/clash_cards/fire_cracker_card.png";
@@ -37,39 +37,67 @@ import Evo_furnace from "../../../public/clash_cards/evo_furnace_card.png";
 import Hog_rider from "../../../public/clash_cards/hog_rider_card.png";
 import Witch from "../../../public/clash_cards/witch_card.png";
 import Royal_recruits from "../../../public/clash_cards/royal_recruits_card.png";
+import Night_witch from "../../../public/clash_cards/night_witch_card.png";
 
-import Skeleton from "../../../public/skelton.png";
-import Ballooon from "../../../public/Balloon_red.webp";
+// Note: Ensure you have these imports if they were used in the original code, 
+// otherwise keep your existing imports.
+// import Skeleton from "../../../public/skeleton.png"; 
+// import Ballooon from "../../../public/Balloon_red.webp"; 
 
 
 export default function Staff() {
-    const staff_header_style = "flex items-center justify-center w-full text-3xl text-white font-bold py-8 px-16 my-5 max-w-fit rounded-[26px] border border-white/20 bg-[#CF0000]/60 backdrop-blur-md shadow-2xl";
-    const staff_subsection_style = "flex md:flex-wrap sm:flex-wrap xs:flex-wrap items-center justify-center gap-8";
+    // UPDATED: Added max-w-[90%] so headers don't overflow on tiny screens
+    const staff_header_style = "flex items-center justify-center w-full text-3xl text-white font-bold py-8 px-16 my-5 max-w-[90%] md:max-w-fit rounded-[26px] border border-white/20 bg-[#CF0000]/60 backdrop-blur-md shadow-2xl text-center";
+    
+    // UPDATED: Removed 'md:', 'sm:', 'xs:'. Just used 'flex-wrap'. 
+    // This forces wrapping on ALL screen sizes if there isn't enough space.
+    const staff_subsection_style = "flex flex-wrap items-center justify-center gap-8 w-full";
+    
     const audioRef = useRef<HTMLAudioElement | null>(null);
       
-        const playSound = () => {
-          if (!audioRef.current) {
-            audioRef.current = new Audio("/clang.mp3");
-          }
-      
-          audioRef.current.currentTime = 0; // rewind if spam-clicked
-          audioRef.current.play();
-        };
+    const playSound = () => {
+        if (!audioRef.current) {
+        audioRef.current = new Audio("/clang.mp3");
+        }
+    
+        audioRef.current.currentTime = 0; 
+        audioRef.current.play();
+    };
 
     return(
         <section>
-            <div id="content-container" className="flex flex-col items-center mb-10">
+            {/* Added padding-x (px-4) to container to prevent cards touching edge of phone screen */}
+            <div id="content-container" className="flex flex-col items-center mb-10 px-4">
                 
                 <h3 className={`${staff_header_style}`}>Professors</h3>
 
-                {/* NEW WRAPPER: Holds Left Image + Subsection + Right Image */}
-                <div className="flex items-center justify-center w-full gap-4">
-                    <div
-                        className="flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
+                {/* WRAPPER: Changed to flex-col on mobile, flex-row on large screens. */}
+                <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+                   
+                    <div className={`${staff_subsection_style}`}>
+                        <StaffCard name="Serena Booth (Professor)" pronouns="she/her/hers"
+                        blurb="Serena a (new) Assistant Professor in Computer Science at Brown University. At Brown, she leads the GIRAFFE Lab, where she and her students work on questions specification, governance, and interaction for AI systems and robots. After finishing her PhD at MIT in 2023, Serena worked in the U.S. Senate as an AI policy advisor to advance U.S. AI regulation in high-risk applications like housing and banking. Serena spends her leisure time playing fetch with her dog, riding a tandem bicycle with her partner, skiing, or running."
+                        hometown = "Cambridge, UK & Memphis, TN"
+                        photoPath={Serena} clashRoyaleImagePath={Witch}></StaffCard>
+                   
+                        <StaffCard name="Amy Greenwald (Professor)" pronouns="she/her/hers"
+                        blurb = "My research is aimed at building AI agents that make effective decisions in multi-agent—part human, part artificial—environments. The bulk of my efforts have been in service of perfecting market designs, with applications ranging from renewable energy markets to online ad exchanges to wireless spectrum auctions."
+                        hometown = "Providence, RI"
+                        photoPath={Amy} clashRoyaleImagePath={Night_witch}></StaffCard>
+                    </div>
+                </div>
+
+                <h3 className={`${staff_header_style}`}>Dog TAs</h3>
+                
+                {/* WRAPPER: Added relative positioning and responsive handling for side images */}
+                <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4 relative">
+                    
+                     {/* LEFT IMAGE: Added 'hidden lg:block' to hide skeleton on mobile/tablet */}
+                     <div
+                        className="hidden lg:block flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
                         onClick={playSound}
                         title="clang"
                     >      
-                        {/* LEFT IMAGE (Outside the subsection) */}
                         <Image
                             src= "/new_skel.png"
                             alt="skeleton" 
@@ -78,60 +106,26 @@ export default function Staff() {
                             height = {500}
                             priority
                         />
-
                     </div>
-
-                    
-                    <div className={`${staff_subsection_style}`}>
-                        <StaffCard name="Serena Booth (Professor)" pronouns="she/her/hers"
-                        blurb="Serena a (new) Assistant Professor in Computer Science at Brown University. At Brown, she leads the GIRAFFE Lab, where she and her students work on questions specification, governance, and interaction for AI systems and robots. After finishing her PhD at MIT in 2023, Serena worked in the U.S. Senate as an AI policy advisor to advance U.S. AI regulation in high-risk applications like housing and banking. Serena spends her leisure time playing fetch with her dog, riding a tandem bicycle with her partner, skiing, or running."
-                        hometown = "Cambridge, UK & Memphis, TN"
-                        photoPath={Serena} clashRoyaleImagePath={Witch}></StaffCard>
-                    </div>
-                    {/* RIGHT IMAGE (Outside the subsection) */}
-                    <Image
-                        src= "/Balloon_red.webp"
-                        alt="Balloon" 
-                        className="balloon -translate-y-90"
-                        width = {300} 
-                        height = {500}
-                    />
-                    
-                </div>
-
-                <h3 className={`${staff_header_style}`}>Dog TAs</h3>
-                {/* NEW WRAPPER: Holds Left Image + Subsection + Right Image */}
-                <div className="flex items-center justify-center w-full gap-4">
-                    
-                    {/* LEFT IMAGE (Outside the subsection) */}
-                    <Image
-                        src= "/Royal_Hogs_2.webp"
-                        alt="pigs" 
-                        className="pigs translate-y-40"                        
-                        width = {300} 
-                        height = {500}
-                        priority
-                    />
                     
                     <div className={`${staff_subsection_style}`}>                    
                         <StaffCard name="Dog" pronouns=""
                         blurb=""  hometown = ""
                         photoPath={Dog} clashRoyaleImagePath={Lava_hound}></StaffCard>
                     </div>
-                    {/* RIGHT IMAGE (Outside the subsection) */}
-                                   
-                        <Image
-                            src= "/Lava_pups.webp"
-                            alt="Lava Pups" 
-                            className="lavapups -translate-y-50"
-                            width = {300} 
-                            height = {500}
-                        />
 
+                    {/* RIGHT IMAGE: Added 'hidden lg:block' to hide balloon on mobile/tablet */}
+                    <div className="hidden lg:block">
+                        <Image
+                            src= "/Balloon_red.webp"
+                            alt="Balloon" 
+                            className="balloon -translate-y-50"
+                            width = {600} 
+                            height = {900}
+                        />
+                    </div>
                     
                 </div>
-
-                
 
                 <h3 className={`${staff_header_style}`}>HTAs</h3>
                 <div className={`${staff_subsection_style}`}>

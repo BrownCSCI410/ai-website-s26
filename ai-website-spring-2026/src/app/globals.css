@@ -27,5 +27,17 @@ body {
 body {
   background: rgb(var(--cr-blue-900));
 }
+/* In globals.css */
+body {
+  /* 1. url('/cursor.png'): The path to your image
+     2. 0 0: The "hotspot" (where the click actually happens). 0 0 is top-left.
+     3. auto: The fallback if the image fails to load.
+  */
+  cursor: url('/cursor.png') 0 0, auto;
+}
 
-/* ====== Components (Pure CSS, no @apply) ====== */
+a, button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"],
+select, label, summary,
+.cursor-pointer, [data-cursor="pointer"] {
+  cursor: url("/cursor-pointer.png") 0 0, pointer !important;
+}
