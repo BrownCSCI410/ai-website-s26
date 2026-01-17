@@ -33,11 +33,11 @@ body {
      2. 0 0: The "hotspot" (where the click actually happens). 0 0 is top-left.
      3. auto: The fallback if the image fails to load.
   */
-  cursor: url('/cursor.png') 0 0, auto;
+  cursor: url('/ai-website-s26/cursor.png') 0 0, auto;
 }
 
 a, button, [role="button"], input[type="button"], input[type="submit"], input[type="reset"],
 select, label, summary,
 .cursor-pointer, [data-cursor="pointer"] {
-  cursor: url("/cursor-pointer.png") 0 0, pointer !important;
+  cursor: url("/ai-website-s26/cursor-pointer.png") 0 0, pointer !important;
 }

@@ -1,0 +1,1 @@
+export const PREFIX = '/ai-website-s26/public';
