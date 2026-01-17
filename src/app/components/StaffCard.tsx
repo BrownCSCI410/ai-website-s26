@@ -86,7 +86,7 @@ export function StaffCard(props: StaffCardProps) {
 
 export function ProfCard(props: ProfCardProps) {
     return (
-        <div className="min-h-[400px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
+        <div className="min-h-[750px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
             <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
             <br/>
             <br/>
