@@ -170,7 +170,7 @@ export default function Staff() {
                     blurb=""  hometown = ""
                     photoPath={Gun} clashRoyaleImagePath={Evo_furnace}></StaffCard>
                     
-                    <StaffCard name="John"  pronouns=""
+                    <StaffCard name="John"  pronouns="he/him"
                     blurb="Hi! I'm a junior studying applied math and computer science. I like to swim, play piano, play video games, and listen to music."
                     hometown = "Milford, Pennsylvania"
                     photoPath={John} clashRoyaleImagePath={Sus_bush}></StaffCard>

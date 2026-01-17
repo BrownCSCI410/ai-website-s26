@@ -24,6 +24,7 @@ export default function Navbar() {
           <a href="#lectures" className="hover:text-pink-400 transition">Lectures</a>
           <a href="#calendar" className="hover:text-pink-400 transition">Hours</a>
           <a href="#discussion" className="hover:text-pink-400 transition">Discussion</a>
+          <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
 
 
         </nav>

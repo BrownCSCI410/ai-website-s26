@@ -8,9 +8,9 @@ import Lectures from "./components/Lectures";
 import Staff from "./components/Staff";
 import Calendar from "./components/Calendar";
 import Discussion from "./components/Discussion";
+import Resources from "./components/Resources";
+
 export default function HomePage() {
-
-
   return (
     <main className="relative min-h-screen text-white overflow-x-hidden">
       <Navbar />
@@ -59,7 +59,10 @@ export default function HomePage() {
             <Discussion/>
         </section>
 
-
+        {/* Resources */}
+        <section id="resources">
+            <Resources/>
+        </section>
 
       </div>
     </main>
