@@ -32,10 +32,10 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-8 text-white font-medium">
           <a href="#top" className="hover:text-pink-400 transition">About</a>
           <a href="#assignments" className="hover:text-pink-400 transition">Assignments</a>
-          <a href="#staff" className="hover:text-pink-400 transition">Staff</a>
           <a href="#lectures" className="hover:text-pink-400 transition">Lectures</a>
           <a href="#calendar" className="hover:text-pink-400 transition">Hours</a>
           <a href="#discussion" className="hover:text-pink-400 transition">Discussion</a>
+          <a href="#staff" className="hover:text-pink-400 transition">Staff</a>
           <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
 
 
@@ -71,10 +71,10 @@ export default function Navbar() {
           <nav className="flex flex-col items-center py-6 gap-6 text-white font-medium text-lg">
             <a href="#top" onClick={closeMenu} className="hover:text-pink-400 transition">About</a>
             <a href="#assignments" onClick={closeMenu} className="hover:text-pink-400 transition">Assignments</a>
-            <a href="#staff" onClick={closeMenu} className="hover:text-pink-400 transition">Staff</a>
             <a href="#lectures" onClick={closeMenu} className="hover:text-pink-400 transition">Lectures</a>
             <a href="#calendar" onClick={closeMenu} className="hover:text-pink-400 transition">Hours</a>
             <a href="#discussion" onClick={closeMenu} className="hover:text-pink-400 transition">Discussion</a>
+            <a href="#staff" onClick={closeMenu} className="hover:text-pink-400 transition">Staff</a>
             <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
 
           </nav>

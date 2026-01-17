@@ -21,7 +21,7 @@ export default function HomePage() {
       {/* Background Layer - Changed to fixed so it stays put while you scroll */}
       <div 
         className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: 'url("/bg-arena.jpg")' }}
+        style={{ backgroundImage: 'url("/ai-website-s26/bg-arena.jpg")' }}
         aria-hidden="true" 
       />
       <div className="fixed inset-0 z-10 bg-black/30" aria-hidden="true" />
@@ -39,11 +39,6 @@ export default function HomePage() {
             <Assignments/>
         </section>
 
-        {/* Staff (Professor, HTAs, UTA-STAs, UTAs)*/}
-        <section id="staff">
-            <Staff/>
-        </section>
-
         {/* Lectures */}
         <section id="lectures">
             <Lectures/>
@@ -57,6 +52,11 @@ export default function HomePage() {
         {/* Discussion */}
         <section id="discussion">
             <Discussion/>
+        </section>
+
+        {/* Staff (Professor, HTAs, UTA-STAs, UTAs)*/}
+        <section id="staff">
+            <Staff/>
         </section>
 
         {/* Resources */}
