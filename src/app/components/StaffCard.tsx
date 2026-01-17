@@ -27,7 +27,6 @@ type ProfCardProps = {
     photoPath: StaticImageData;
     hometown: string;
     clashRoyaleImagePath: StaticImageData;
-    extraSpaces?: number
 }
 
 export class FlipCard extends React.Component<FlipCardProps> {
@@ -87,7 +86,7 @@ export function StaffCard(props: StaffCardProps) {
 
 export function ProfCard(props: ProfCardProps) {
     return (
-        <div className="border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
+        <div className="min-h-[400px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
             <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
             <br/>
             <br/>
@@ -98,21 +97,6 @@ export function ProfCard(props: ProfCardProps) {
                 <br/>
                 <p className="text-sm">{props.blurb}</p>
                 <br/>
-                {props.extraSpaces === 2 && (
-                    <>
-                        <br/>
-                        <br/>
-                    </>
-                )}
-                {props.extraSpaces === 5 && (
-                    <>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                    </>
-                )}
                 <p className="text-sm">Hometown: {props.hometown}</p>
             </div>
         </div>

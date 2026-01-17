@@ -79,8 +79,7 @@ export default function Staff() {
                         <ProfCard name="Amy Greenwald" pronouns="she/her/hers"
                         blurb = "My research is aimed at building AI agents that make effective decisions in multi-agent—part human, part artificial—environments. The bulk of my efforts have been in service of perfecting market designs, with applications ranging from renewable energy markets to online ad exchanges to wireless spectrum auctions."
                         hometown = "Providence, RI"
-                        photoPath={Amy} clashRoyaleImagePath={Night_witch}
-                        extraSpaces={5}></ProfCard>
+                        photoPath={Amy} clashRoyaleImagePath={Night_witch}></ProfCard>
                     </div>
                 </div>
 
@@ -139,8 +138,7 @@ export default function Staff() {
                     <ProfCard name="Sarah"  pronouns="she/her"
                     blurb="Hi! It's super nice to meet you all! I'm a junior studying CS, but you're more likely to find me in TFG 205 than the CIT." 
                     hometown = "Solon, Ohio"
-                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}
-                    extraSpaces={2}></ProfCard>
+                    photoPath={Sarah} clashRoyaleImagePath={Fire_spirit}></ProfCard>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>Joint STA/UTAs</h3>
