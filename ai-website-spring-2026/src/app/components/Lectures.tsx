@@ -53,18 +53,13 @@ const LECTURE_DATA = [
   { date: "May 1", name: "No Class" },
   { date: "May 4", name: "No Class" },
 ];
-
 function Lecture({lectureName, date}: lectureProps) {
-    // Logic to deemphasize "No Class" rows
     const isNoClass = lectureName === "No Class";
-    
     return (
         <tr className={`hover:bg-white/5 transition-colors group ${isNoClass ? 'opacity-40' : ''}`}>
-            {/* Column 1: Lecture Name */}
             <td className="px-6 py-4 font-medium text-white group-hover:text-yellow-200">
                 {lectureName}
             </td>
-            {/* Column 2: Date */}
             <td className="px-6 py-4 text-white/70 tabular-nums text-right whitespace-nowrap">
                 {date}
             </td>
@@ -75,7 +70,24 @@ function Lecture({lectureName, date}: lectureProps) {
 export default function Lectures() {
     return (
         <section className="py-20">
-          <div className="p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm">
+          {/* 1. Added 'relative' to this container so the image sticks to it. 
+              (The rest of your classes remain the same) 
+          */}
+          <div className="relative p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm">
+            
+            {/* ----------------- YOUR IMAGE ----------------- */}
+            {/* - 'absolute': Allows us to position it anywhere relative to the box.
+                - 'bottom-full': Sits the image exactly on top of the border.
+                - 'right-0': Aligns it to the right edge.
+                - 'mb-[-1px]': Moves it down 1 pixel to ensure it "touches" perfectly without a gap.
+            */}
+            <img 
+                src="/peka_thumbs_up.png"  
+                alt="Decoration"
+                className="absolute bottom-full right-0 w-80 h-auto object-contain mb-[-1px]" 
+            />
+            {/* ---------------------------------------------- */}
+
             <h3 className="text-3xl font-bold mb-6 text-center text-white">Lectures</h3>
             
             <table className="w-full text-left border-collapse">

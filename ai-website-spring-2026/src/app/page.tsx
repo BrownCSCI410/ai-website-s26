@@ -7,7 +7,7 @@ import Assignments from "./components/Assignments";
 import Lectures from "./components/Lectures";
 import Staff from "./components/Staff";
 import Calendar from "./components/Calendar";
-
+import Discussion from "./components/Discussion";
 export default function HomePage() {
 
 
@@ -53,6 +53,12 @@ export default function HomePage() {
         <section id="calendar">
             <Calendar/>
         </section>
+
+        {/* Discussion */}
+        <section id="discussion">
+            <Discussion/>
+        </section>
+
 
 
       </div>
