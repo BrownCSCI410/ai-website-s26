@@ -54,24 +54,6 @@ export class FlipCard extends React.Component<FlipCardProps> {
   }
 }
 
-export function StaffCard(props: StaffCardProps) {
-    return (
-        <div className="border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
-            <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
-            <br/>
-            <br/>
-            <br/>
-            <div className="max-w-xs border border-white/10 bg-black/40 rounded-[20px] p-3">
-                <p className="staff-name text-2xl font-bold">{props.name}</p>
-                <p className="pronouns">{props.pronouns}</p>
-                <br/>
-                <p className="text-sm">{props.blurb}</p>
-                <br/>
-                <p className="text-sm">Hometown: {props.hometown}</p>
-            </div>
-        </div>
-    );
-}
 
 export function ProfCard(props: StaffCardProps) {
     return (
@@ -92,7 +74,7 @@ export function ProfCard(props: StaffCardProps) {
     );
 }
 
-export function HTACard(props: StaffCardProps) {
+export function TACard(props: StaffCardProps) {
     return (
         <div className="min-h-[675px] border border-white/10 bg-blue-900/60 backdrop-blur-sm rounded-[26px] pt-0 pb-5 px-5">
             <FlipCard photoPath={props.photoPath} clashRoyaleImagePath={props.clashRoyaleImagePath}/>
