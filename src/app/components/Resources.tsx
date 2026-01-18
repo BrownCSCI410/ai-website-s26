@@ -24,14 +24,14 @@ export default function Resources() {
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
           
-        const playSound = () => {
-            if (!audioRef.current) {
-            audioRef.current = new Audio(`${PREFIX}he he he ha.mp3`);
-            }
-        
-            audioRef.current.currentTime = 0; 
-            audioRef.current.play();
-        };
+    const playSound = () => {
+        if (!audioRef.current) {
+        audioRef.current = new Audio(`${PREFIX}he_he_he_ha.mp3`);
+        }
+    
+        audioRef.current.currentTime = 0; 
+        audioRef.current.play();
+    };
 
     return (
         <section className="py-20">
@@ -45,7 +45,7 @@ export default function Resources() {
                 />
 
                 <div
-                    className="hidden lg:absolute lg:left-0 lg:block flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
+                    className=""
                     onClick={playSound}
                     title="he he he ha"
                 >

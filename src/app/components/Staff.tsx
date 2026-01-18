@@ -130,7 +130,7 @@ export default function Staff() {
                         <Image
                             src={`${PREFIX}new_skel.png`}
                             alt="skeleton" 
-                            className="skeleton translate-y-50 translate-x-25"                        
+                            className="skeleton translate-y-50 translate-x-25"
                             width = {250} 
                             height = {400}
                             priority
