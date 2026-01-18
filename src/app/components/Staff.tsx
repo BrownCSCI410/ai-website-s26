@@ -150,7 +150,7 @@ export default function Staff() {
                         <Image
                             src={`${PREFIX}Balloon_red.webp`}
                             alt="Balloon" 
-                            className="balloon -translate-y-70 translate-x-40"
+                            className="balloon -translate-y-70 translate-x-10"
                             width = {250}
                             height = {300}
                         />
