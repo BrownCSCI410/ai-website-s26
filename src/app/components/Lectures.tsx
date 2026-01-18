@@ -73,7 +73,7 @@ export default function Lectures() {
     return (
         <section className="py-20">
           {/* 1. Responsive padding (p-4 md:p-10) and overflow handling */}
-          <div className="relative p-4 md:p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm overflow-hidden md:overflow-visible">
+          <div className="relative p-4 md:p-10 rounded-[26px] border border-white/10 bg-black/40 backdrop-blur-sm overflow-visible md:overflow-visible">
             
             {/* 2. Added 'hidden md:block' 
                 The w-80 image is too large for mobile screens, so we hide it 
@@ -82,7 +82,7 @@ export default function Lectures() {
             <img 
                 src={`${PREFIX}peka_thumbs_up.png`}
                 alt="Decoration"
-                className="hidden md:block absolute bottom-full right-0 w-80 h-auto object-contain mb-[-1px]" 
+                className="absolute bottom-full right-0 w-76 h-auto object-contain mb-[-1px]" 
             />
 
             <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-white">Lectures</h3>

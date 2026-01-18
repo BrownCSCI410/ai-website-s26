@@ -39,6 +39,7 @@ import Hog_rider from "../../../public/clash_cards/hog_rider_card.png";
 import Witch from "../../../public/clash_cards/witch_card.png";
 import Royal_recruits from "../../../public/clash_cards/royal_recruits_card.png";
 import Night_witch from "../../../public/clash_cards/night_witch_card.png";
+import Muskies from "../../../public/clash_cards/muskies_card.png";
 
 
 export default function Staff() {
@@ -164,8 +165,9 @@ export default function Staff() {
                     hometown = "Shrewsbury, Massachusetts"
                     photoPath={Alex} clashRoyaleImagePath={Ebarbs}></StaffCard>
 
-                    <StaffCard name="Gun"  pronouns=""
-                    blurb=""  hometown = ""
+                    <StaffCard name="Gun"  pronouns="he/him"
+                    blurb="Hi everyone! I'm Gun, a sophomore studying Computer Science and Economics from Thailand. In my free time, I enjoy scrolling on reels, playing golf, and hanging out with friends. Super excited to meet you all!"
+                    hometown = "Bangkok, Thailand"
                     photoPath={Gun} clashRoyaleImagePath={Evo_furnace}></StaffCard>
                     
                     <StaffCard name="John"  pronouns="he/him"
@@ -176,7 +178,7 @@ export default function Staff() {
                     <StaffCard name="Leanne"  pronouns="she/her"
                     blurb="Hi! I'm Leanne, and I'm a junior studying CS and APMA-Econ. I really enjoy exploring new cafes, collecting vinyls, listening to music, and doing ballroom dance! :)"
                     hometown = "Singapore"
-                    photoPath={Leanne} clashRoyaleImagePath={Leanne}></StaffCard>
+                    photoPath={Leanne} clashRoyaleImagePath={Muskies}></StaffCard>
 
                     <StaffCard name="Maddie"  pronouns="she/her"
                     blurb="Hi! I am a sophomore from North Carolina studying APMA-CS. I love watching Arsenal games, snowboarding, hiking, puzzling, and going on side quests. Always feel free to reach out, I love yapping! I can’t wait to meet you!"

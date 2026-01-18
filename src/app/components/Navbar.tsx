@@ -33,7 +33,7 @@ export default function Navbar() {
           <a href="#top" className="hover:text-pink-400 transition">About</a>
           <a href="#assignments" className="hover:text-pink-400 transition">Assignments</a>
           <a href="#lectures" className="hover:text-pink-400 transition">Lectures</a>
-          <a href="#calendar" className="hover:text-pink-400 transition">Hours</a>
+          <a href="#calendar" className="hover:text-pink-400 transition">Calendar</a>
           <a href="#discussion" className="hover:text-pink-400 transition">Discussion</a>
           <a href="#staff" className="hover:text-pink-400 transition">Staff</a>
           <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
@@ -72,7 +72,7 @@ export default function Navbar() {
             <a href="#top" onClick={closeMenu} className="hover:text-pink-400 transition">About</a>
             <a href="#assignments" onClick={closeMenu} className="hover:text-pink-400 transition">Assignments</a>
             <a href="#lectures" onClick={closeMenu} className="hover:text-pink-400 transition">Lectures</a>
-            <a href="#calendar" onClick={closeMenu} className="hover:text-pink-400 transition">Hours</a>
+            <a href="#calendar" onClick={closeMenu} className="hover:text-pink-400 transition">Calendar</a>
             <a href="#discussion" onClick={closeMenu} className="hover:text-pink-400 transition">Discussion</a>
             <a href="#staff" onClick={closeMenu} className="hover:text-pink-400 transition">Staff</a>
             <a href="#resources" className="hover:text-pink-400 transition">Resources</a>
