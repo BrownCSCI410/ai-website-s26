@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
+import MouseTrail from "./components/MouseTrail";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen antialiased text-white">
         {children}
+        <MouseTrail/>
       </body>
     </html>
   );
