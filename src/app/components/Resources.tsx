@@ -1,5 +1,6 @@
 import React from 'react';
 import { PREFIX } from "./prefix";
+import { useRef } from 'react';
 
 type resourceProps = {
     resourceName: string
@@ -21,6 +22,17 @@ export default function Resources() {
     const resourceGroupHeaderStyle = "text-xl font-bold text-center text-yellow-400 uppercase tracking-wider pt-8 pb-3";
     const resourceGroupStyle = "flex flex-wrap flex-row items-center justify-center gap-2";
 
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+          
+        const playSound = () => {
+            if (!audioRef.current) {
+            audioRef.current = new Audio(`${PREFIX}he he he ha.mp3`);
+            }
+        
+            audioRef.current.currentTime = 0; 
+            audioRef.current.play();
+        };
+
     return (
         <section className="py-20">
             <div className="relative p-10 rounded-[26px] border border-white/10 bg-blue-900/60 backdrop-blur-sm">
@@ -32,12 +44,18 @@ export default function Resources() {
                     className="hidden md:block absolute bottom-full left-0 w-72 h-auto object-contain mb-[-1px] translate-y-60" 
                 />
 
-                {/* === TOP RIGHT IMAGE === */}
-                <img 
-                    src={`${PREFIX}kings_cheering.png`}
-                    alt="Right Decoration"
-                    className="hidden md:block absolute bottom-full right-0 w-72 h-auto object-contain mb-[-1px] translate-y-64" 
-                />
+                <div
+                    className="hidden lg:absolute lg:left-0 lg:block flex-shrink-0 cursor-pointer hover:scale-105 transition-transform"
+                    onClick={playSound}
+                    title="he he he ha"
+                >
+                    {/* === TOP RIGHT IMAGE === */}
+                    <img 
+                        src={`${PREFIX}kings_cheering.png`}
+                        alt="Right Decoration"
+                        className="hidden md:block absolute bottom-full right-0 w-72 h-auto object-contain mb-[-1px] translate-y-64" 
+                    />
+                </div>
                 
                 {/* === BUBBLE HEADER === */}
                 <div className="flex justify-center mb-6">  
