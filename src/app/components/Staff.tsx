@@ -130,7 +130,7 @@ export default function Staff() {
                         <Image
                             src= {`${PREFIX}Lava_Hound.webp`}
                             alt="Lava hound" 
-                            className="balloon -translate-y-70"
+                            className="lava hound -translate-y-70"
                             width = {300} 
                             height = {400}
                         />
