@@ -89,7 +89,7 @@ export default function Staff() {
                 
                     <div className={`${staff_subsection_style}`}>                    
                         <TACard name="Dog" pronouns=""
-                        blurb="Woof"  hometown = "Woof"
+                        blurb="Howdy! I'm Ducki. I was raised in NYC, but when the city overwhelmed me, my original human gave me up to Prof. Booth. She feeds me and takes me to the beach and hiking which is cool but not as much as I'd like. She says she's 'busy' teaching or something ridiculous."  hometown = "Manhattan"
                         photoPath={Dog} clashRoyaleImagePath={Lava_hound}></TACard>
 
                         <TACard name="Dog2" pronouns=""
