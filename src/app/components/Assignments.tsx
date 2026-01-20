@@ -150,7 +150,7 @@ export default function Assignments() {
                             href="https://hackmd.io/qXuz85jXTWeV6O473a6TOg"
                         />
                         <Assignment
-                            assignmentName="Midterm (in-class)"
+                            assignmentName="Midterm"
                             autoReleaseDate={undefined}
                             outDate="3/13"
                             dueDate="3/13"
