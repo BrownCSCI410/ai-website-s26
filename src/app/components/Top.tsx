@@ -59,13 +59,13 @@ export default function Top() {
               <p className="text-base md:text-lg font-medium leading-relaxed opacity-90">
                 Welcome to CS410/1411! This course offers broad coverage of core topics in 
                 artificial intelligence (AI) as a prelude to students taking more in-depth 
-                AI courses later on. Throughout the course, you will delve into key AI 
+                AI courses later on. Throughout the course, you will study key AI 
                 models, reinforcement learning, and both supervised and unsupervised 
                 machine learning to build socially responsible AI.
               </p>
               <br/>
               <p className="text-base md:text-lg font-medium leading-relaxed opacity-90">
-                Instructor: Serena Booth and Amy Greenwald
+                Instructor: Prof. Serena Booth
               </p>
             </div>
           </div>
