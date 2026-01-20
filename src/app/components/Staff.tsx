@@ -104,11 +104,39 @@ export default function Staff() {
                 </div>
 
                 <h3 className={`${staff_header_style}`}>Dog TAs</h3>
+                {/* WRAPPER: Added relative positioning and responsive handling for side images */}
+                <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4 relative">
+                    
+                     {/* LEFT IMAGE: Added 'hidden lg:block' to hide skeleton on mobile/tablet */}
+                     <div className="hidden lg:absolute lg:left-0 lg:block flex-shrink-0">      
+                        <Image
+                            src={`${PREFIX}Royal_Hog.webp`}
+                            alt="hog" 
+                            className="hog translate-y-30 translate-x-25"                        
+                            width = {250} 
+                            height = {400}
+                            priority
+                        />
+                    </div>
+
                     <div className={`${staff_subsection_style}`}>                    
                         <TACard name="Ducki" pronouns=""
                         blurb="Howdy! I'm Ducki. I was raised in NYC, but when the city overwhelmed me, my original human gave me up to Prof. Booth. She feeds me and takes me to the beach and hiking which is cool but not as much as I'd like. She says she's 'busy' teaching or something ridiculous."  hometown = "Manhattan"
                         photoPath={Dog} clashRoyaleImagePath={Lava_hound}></TACard>
                     </div>
+
+                    {/* RIGHT IMAGE: Added 'hidden lg:block' to hide balloon on mobile/tablet */}
+                    <div className="hidden lg:block lg:absolute lg:right-0">
+                        <Image
+                            src= {`${PREFIX}Lava_Hound.webp`}
+                            alt="Lava hound" 
+                            className="balloon -translate-y-70"
+                            width = {300} 
+                            height = {400}
+                        />
+                    </div>
+                    
+                </div>
 
                 
 
