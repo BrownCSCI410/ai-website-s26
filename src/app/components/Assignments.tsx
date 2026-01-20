@@ -184,25 +184,11 @@ export default function Assignments() {
                             href="https://hackmd.io/4cTsuCVRRmW1VxRnnDeHWg"
                         />
                         <Assignment
-                            assignmentName="Final Project Part 1"
+                            assignmentName="Final Project"
                             autoReleaseDate="Apr 22, 2026 14:00:00 EDT"
                             outDate="4/22"
-                            dueDate="5/4"
+                            dueDate="TBD"
                             href="https://hackmd.io/lp701aRlRCqmmRS3Atvewg"
-                        />
-                        <Assignment
-                            assignmentName="Final Project Part 2"
-                            autoReleaseDate="Apr 22, 2026 14:00:00 EDT"
-                            outDate="4/22"
-                            dueDate="5/4"
-                            href="https://hackmd.io/B8BCfBV1QS-vxshLq3e3RQ"
-                        />
-                        <Assignment
-                            assignmentName="Final Project Part 3"
-                            autoReleaseDate="Apr 22, 2026 14:00:00 EDT"
-                            outDate="4/22"
-                            dueDate="5/4"
-                            href="https://hackmd.io/dIgJakLUSnaUtFIrQmdS9Q"
                         />
                     </tbody>
                 </table>
