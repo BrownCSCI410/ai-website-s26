@@ -66,14 +66,40 @@ export default function Staff() {
                 
                 <h3 className={`${staff_header_style}`}>Professor</h3>
 
-                {/* WRAPPER: Changed to flex-col on mobile, flex-row on large screens. */}
-                <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
+               {/* WRAPPER: Changed to flex-col on mobile, flex-row on large screens. */}
+                <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4 relative">
+                    
+                     {/* LEFT IMAGE: Added 'hidden lg:block' to hide skeleton on mobile/tablet */}
+                     <div
+                        className="hidden lg:absolute lg:left-0 lg:block flex-shrink-0  "
+        
+                    >      
+                        <Image
+                            src={`${PREFIX}Guard.webp`}
+                            alt="skeleton" 
+                            className="skeleton translate-x-30 translate-y-40"                        
+                            width = {200} 
+                            height = {400}
+                            priority
+                        />
+                    </div>
                    
                     <div className={`${staff_subsection_style}`}>
                         <ProfCard name="Serena Booth" pronouns="she/her/hers"
                         blurb="Serena a (new) Assistant Professor in Computer Science at Brown University. At Brown, she leads the GIRAFFE Lab, where she and her students work on questions specification, governance, and interaction for AI systems and robots. After finishing her PhD at MIT in 2023, Serena worked in the U.S. Senate as an AI policy advisor to advance U.S. AI regulation in high-risk applications like housing and banking. Serena spends her leisure time playing fetch with her dog, riding a tandem bicycle with her partner, skiing, or running."
                         hometown = "Cambridge, UK & Memphis, TN"
                         photoPath={Serena} clashRoyaleImagePath={Witch}></ProfCard>
+                    </div>
+                    
+                    {/* RIGHT IMAGE: Added 'hidden lg:block' to hide balloon on mobile/tablet */}
+                    <div className="hidden lg:block lg:absolute lg:right-0">
+                        <Image
+                            src={`${PREFIX}witch.png`}
+                            alt="Balloon" 
+                            className="witch translate-x-30 -translate-y-40"
+                            width = {700}
+                            height = {900}
+                        />
                     </div>
                 </div>
 
