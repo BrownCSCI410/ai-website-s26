@@ -20,8 +20,6 @@ import Nico from "../../../public/staff_photos/nico_card.png";
 import Riley from "../../../public/staff_photos/riley_card.png";
 import Stephanie from "../../../public/staff_photos/stephanie_card.png";
 import Tyrone from "../../../public/staff_photos/tyrone_card.png";
-import Amy from "../../../public/staff_photos/amy_card.png";
-
 
 import Ebarbs from "../../../public/clash_cards/ebarbs_card.png";
 import Fire_cracker from "../../../public/clash_cards/fire_cracker_card.png";
@@ -66,7 +64,7 @@ export default function Staff() {
             {/* Added padding-x (px-4) to container to prevent cards touching edge of phone screen */}
             <div id="content-container" className="flex flex-col items-center mb-10 px-4">
                 
-                <h3 className={`${staff_header_style}`}>Professors</h3>
+                <h3 className={`${staff_header_style}`}>Professor</h3>
 
                 {/* WRAPPER: Changed to flex-col on mobile, flex-row on large screens. */}
                 <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
@@ -76,24 +74,13 @@ export default function Staff() {
                         blurb="Serena a (new) Assistant Professor in Computer Science at Brown University. At Brown, she leads the GIRAFFE Lab, where she and her students work on questions specification, governance, and interaction for AI systems and robots. After finishing her PhD at MIT in 2023, Serena worked in the U.S. Senate as an AI policy advisor to advance U.S. AI regulation in high-risk applications like housing and banking. Serena spends her leisure time playing fetch with her dog, riding a tandem bicycle with her partner, skiing, or running."
                         hometown = "Cambridge, UK & Memphis, TN"
                         photoPath={Serena} clashRoyaleImagePath={Witch}></ProfCard>
-                   
-                        <ProfCard name="Amy Greenwald" pronouns="she/her/hers"
-                        blurb = "My research is aimed at building AI agents that make effective decisions in multi-agent—part human, part artificial—environments. The bulk of my efforts have been in service of perfecting market designs, with applications ranging from renewable energy markets to online ad exchanges to wireless spectrum auctions."
-                        hometown = "Providence, RI"
-                        photoPath={Amy} clashRoyaleImagePath={Night_witch}></ProfCard>
                     </div>
                 </div>
 
                 <h3 className={`${staff_header_style}`}>Dog TAs</h3>
-                
-                
                     <div className={`${staff_subsection_style}`}>                    
-                        <TACard name="Dog" pronouns=""
+                        <TACard name="Ducki" pronouns=""
                         blurb="Howdy! I'm Ducki. I was raised in NYC, but when the city overwhelmed me, my original human gave me up to Prof. Booth. She feeds me and takes me to the beach and hiking which is cool but not as much as I'd like. She says she's 'busy' teaching or something ridiculous."  hometown = "Manhattan"
-                        photoPath={Dog} clashRoyaleImagePath={Lava_hound}></TACard>
-
-                        <TACard name="Dog2" pronouns=""
-                        blurb="Bark"  hometown = "Woof"
                         photoPath={Dog} clashRoyaleImagePath={Lava_hound}></TACard>
                     </div>
 
