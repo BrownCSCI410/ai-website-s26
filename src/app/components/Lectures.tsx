@@ -1,20 +1,29 @@
 import { PREFIX } from "./prefix";
 import React from 'react';
 
-// 1. Updated Type Definitions
+// 1. Define the shape of your data items
+// This tells TypeScript: "Even if you don't see these fields yet, they are allowed."
+type LectureItem = {
+  date: string;
+  name: string;
+  readings?: string;
+  notesLink?: string;
+  resourceName?: string;
+  resourceLink?: string;
+};
+
+// 2. Updated Type Definitions for the Component Props
 type lectureProps = {
     lectureName: string,
     date?: string,
-    readings?: string,       // New Readings field
+    readings?: string,
     notesLink?: string,
     resourceName?: string,
     resourceLink?: string,
 }
 
-// 2. Updated Data Structure with 'readings'
-// to link notes add - notesLink: `${PREFIX}search_notes.pdf` 
-// simply place pdfs in public, I can sort it later
-const LECTURE_DATA = [
+// 3. Apply the type to the array: `const LECTURE_DATA: LectureItem[]`
+const LECTURE_DATA: LectureItem[] = [
   { 
       date: "Jan 21", 
       name: "Introduction to AI", 
@@ -25,14 +34,12 @@ const LECTURE_DATA = [
       resourceName: "Uninformed Search",
       resourceLink: `${PREFIX}uninformed_search.pdf` 
   },
-
-  { date: "Jan 26",
-    name: "Heuristic Search (Best-g, Best-h)", 
-    resourceName: "Informed Search",
-    resourceLink: `${PREFIX}informed_search.pdf` 
-},
-
-
+  { 
+      date: "Jan 26",
+      name: "Heuristic Search (Best-g, Best-h)", 
+      resourceName: "Informed Search",
+      resourceLink: `${PREFIX}informed_search.pdf` 
+  },
   { date: "Jan 28", name: "Optimal Search: A*" },
   { date: "Jan 30", name: "Adversarial search (minimax + alpha-beta pruning)" },
   { date: "Feb 2", name: "Discrete Optimization: Local Search" },
