@@ -76,8 +76,8 @@ export default function Staff() {
                     >      
                         <Image
                             src={`${PREFIX}Guard.webp`}
-                            alt="skeleton" 
-                            className="skeleton translate-x-30 translate-y-40"                        
+                            alt="Guard" 
+                            className="Guard translate-x-30 translate-y-40"                        
                             width = {200} 
                             height = {400}
                             priority
@@ -95,7 +95,7 @@ export default function Staff() {
                     <div className="hidden lg:block lg:absolute lg:right-0">
                         <Image
                             src={`${PREFIX}witch.png`}
-                            alt="Balloon" 
+                            alt="Witch" 
                             className="witch translate-x-30 -translate-y-40"
                             width = {700}
                             height = {900}
