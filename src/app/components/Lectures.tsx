@@ -27,29 +27,33 @@ const LECTURE_DATA: LectureItem[] = [
   { 
       date: "Jan 21", 
       name: "Introduction to AI", 
+      readings: "R&N Chapter 1"
   },
   { 
       date: "Jan 23", 
       name: "Search Problems: Blind Search (BFS, DFS), Iterative Deepening",
+      readings: "R&N 3.0-3.4",
       resourceName: "Uninformed Search",
-      resourceLink: `${PREFIX}uninformed_search.pdf` 
+      resourceLink: `${PREFIX}uninformed_search.pdf` ,
+
   },
   { 
       date: "Jan 26",
-      name: "Heuristic Search (Best-g, Best-h)", 
+      name: "Heuristic Search (Best-g, Best-h)",       
+      readings: "R&N 3.4-3.5.1",
       resourceName: "Informed Search",
       resourceLink: `${PREFIX}informed_search.pdf` 
   },
-  { date: "Jan 28", name: "Optimal Search: A*" },
-  { date: "Jan 30", name: "Adversarial search (minimax + alpha-beta pruning)" },
-  { date: "Feb 2", name: "Discrete Optimization: Local Search" },
-  { date: "Feb 4", name: "Propositional Logic, SAT and NP-Completeness" },
+  { date: "Jan 28", name: "Optimal Search: A*",  readings: "R&N 3.5.2-3.7"},
+  { date: "Jan 30", name: "Adversarial search (minimax + alpha-beta pruning)", readings: "R&N 5.0-5.3 "},
+  { date: "Feb 2", name: "Discrete Optimization: Local Search", readings: "R&N 4.1" },
+  { date: "Feb 4", name: "Propositional Logic, SAT and NP-Completeness", readings: "R&N 7.6.2-7.6.3"  },
   { date: "Feb 6", name: "CSPs: GSAT, WALKSAT, N-Queens" },
-  { date: "Feb 9", name: "First Order Logic" },
-  { date: "Feb 11", name: "PDDL (+ a solver)" },
-  { date: "Feb 13", name: "(Bayesian) Probability Review" },
+  { date: "Feb 9", name: "First Order Logic", readings: "R&N 8" },
+  { date: "Feb 11", name: "PDDL (+ a solver)", readings: "R&N 10" },
+  { date: "Feb 13", name: "(Bayesian) Probability Review",readings: "R&N 12" },
   { date: "Feb 16", name: "No Class" },
-  { date: "Feb 18", name: "Bayesian Networks (modeling)" },
+  { date: "Feb 18", name: "Bayesian Networks (modeling)", readings: "R&N 14" },
   { date: "Feb 20", name: "Linear Algebra Review" },
   { date: "Feb 23", name: "Continuous Optimization" },
   { date: "Feb 25", name: "Convexity + more LA" },
