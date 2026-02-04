@@ -44,8 +44,20 @@ const LECTURE_DATA: LectureItem[] = [
       resourceName: "Informed Search",
       resourceLink: `${PREFIX}informed_search.pdf` 
   },
-  { date: "Jan 28", name: "Optimal Search: A*",  readings: "R&N 3.5.2-3.7"},
-  { date: "Jan 30", name: "Adversarial search (minimax + alpha-beta pruning)", readings: "R&N 5.0-5.3 "},
+  { 
+      date: "Jan 28", 
+      name: "Optimal Search: A*",  
+      readings: "R&N 3.5.2-3.7",
+      resourceName: "Informed Search",
+      resourceLink: `${PREFIX}informed_search.pdf` 
+  },
+  { 
+      date: "Jan 30", 
+      name: "Adversarial search (minimax + alpha-beta pruning)", 
+      readings: "R&N 5.0-5.3 ",       
+      resourceName: "Adversarial Search",
+      resourceLink: `${PREFIX}adversarial_search.pdf`
+  },
   { date: "Feb 2", name: "Discrete Optimization: Local Search", readings: "R&N 4.1" },
   { date: "Feb 4", name: "Propositional Logic, SAT and NP-Completeness", readings: "R&N 7.6.2-7.6.3"  },
   { date: "Feb 6", name: "CSPs: GSAT, WALKSAT, N-Queens" },
