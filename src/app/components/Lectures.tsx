@@ -58,7 +58,12 @@ const LECTURE_DATA: LectureItem[] = [
       resourceName: "Adversarial Search",
       resourceLink: `${PREFIX}adversarial_search.pdf`
   },
-  { date: "Feb 2", name: "Discrete Optimization: Local Search", readings: "R&N 4.1" },
+  {   date: "Feb 2", 
+      name: "Discrete Optimization: Local Search", 
+      readings: "R&N 4.1", 
+      resourceName: "Local Search", 
+      resourceLink: `${PREFIX}local_search.pdf`
+  },
   { date: "Feb 4", name: "Propositional Logic, SAT and NP-Completeness", readings: "R&N 7.6.2-7.6.3"  },
   { date: "Feb 6", name: "CSPs: GSAT, WALKSAT, N-Queens" },
   { date: "Feb 9", name: "First Order Logic", readings: "R&N 8" },
