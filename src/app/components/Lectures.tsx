@@ -75,7 +75,7 @@ const LECTURE_DATA: LectureItem[] = [
    resourceLink: `${PREFIX}satisfiability.pdf`},
   { date: "Feb 9", 
    name: "First Order Logic", 
-   readings: "R&N 8", ,
+   readings: "R&N 8", 
    resourceName: "KRR: First-Order Logic", 
    resourceLink: `${PREFIX}krr_logic.pdf`},
   { date: "Feb 11", name: "PDDL (+ a solver)", readings: "R&N 10" },
