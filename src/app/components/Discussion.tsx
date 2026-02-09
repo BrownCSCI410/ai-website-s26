@@ -8,7 +8,7 @@ type DiscussionProps = {
 }
 
 const DISCUSSION_DATA = [
-    { topic: "AI Policy", date: "2/2 - 2/6", link: "#" },
+    { topic: "AI Policy", date: "2/2 - 2/6", link: "https://docs.google.com/presentation/d/1UqgWN4X2xrJzTaL2lTbZkFByhlmaBdov8xk1EhA1RPA/edit?usp=sharing" },
     { topic: "HW 1 and 2", date: "2/9 - 2/13", link: "#" },
     { topic: "SRC - TBD", date: "2/23 - 2/27", link: "#" },
     { topic: "HW 3 and 4", date: "3/2 - 3/6", link: "#" },
