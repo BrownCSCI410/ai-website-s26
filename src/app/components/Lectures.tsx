@@ -94,7 +94,6 @@ const LECTURE_DATA: LectureItem[] = [
    readings: "R&N 14", 
    resourceName: "Bayesian Networks",
    resourceLink: `${PREFIX}bayes_nets.pdf`},
-  },
   { date: "Feb 20", name: "Continuous Optimization - Intro" },
   { date: "Feb 23", name: "Continuous Optimization" },
   { date: "Feb 25", name: "Convexity + more LA" },
