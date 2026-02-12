@@ -132,7 +132,7 @@ export default function Assignments() {
                             assignmentName="Homework 4: SAT"
                             autoReleaseDate="Feb 11, 2026 14:00:00 EDT"
                             outDate="2/11"
-                            dueDate="2/17"
+                            dueDate="2/18"
                             href="https://hackmd.io/8oosauPNQ9-GjTHUVd01Hw"
                         />
                         <Assignment
