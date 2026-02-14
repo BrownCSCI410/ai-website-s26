@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -14,19 +15,15 @@ type assignmentProps = {
  * based on its autoReleaseDate and the current date. 
  */
 function shouldRelease(autoReleaseDate: string | undefined) {
-    if (autoReleaseDate === undefined) {
-        return true;
-    }
+    if (!autoReleaseDate) return true;
     
     const now = new Date();
-    // Convert now into EST
-    const nowEST = new Date(
-        now.toLocaleString("en-US", {
-            timeZone: "America/New_York",
+    const releaseDate = new Date(
+        new Date(autoReleaseDate).toLocaleString("en-US", {
+            timeZone: "America/New_York"
         })
     );
-
-    return nowEST > new Date(autoReleaseDate);
+    return now >= releaseDate;
 }
 
 /**
@@ -34,16 +31,31 @@ function shouldRelease(autoReleaseDate: string | undefined) {
  */
 function Assignment({assignmentName, autoReleaseDate = "", outDate = "TBD", dueDate = "TBD", href}: assignmentProps) {
     const [released, setReleased] = useState(false);
+    const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        setReleased(shouldRelease(autoReleaseDate));
-    }, []);
+        setMounted(true);
+        const isNowReleased = shouldRelease(autoReleaseDate);
+        setReleased(isNowReleased);
+
+        // if not released yet, check again every 60s
+        if (!released && autoReleaseDate) {
+            const interval = setInterval(() => {
+                if (shouldRelease(autoReleaseDate)) {
+                    setReleased(true);
+                    clearInterval(interval);
+                }
+            }, 60000);
+
+            return () => clearInterval(interval);
+        }
+    }, [autoReleaseDate]);
 
     // Helper class for consistent cell padding
     // Reduced padding (px-3) on mobile, regular (px-6) on desktop
     const cellPadding = "px-3 md:px-6 py-4";
 
-    if (released && href) {
+    if (mounted && released && href) {
         return (
             <tr className="hover:bg-white/5 transition-colors group">
                 <td className={`${cellPadding} font-medium text-yellow-400 underline decoration-yellow-400/30 hover:decoration-blue-300/30 group-hover:text-blue-400`}>
@@ -109,42 +121,42 @@ export default function Assignments() {
                     <tbody>
                         <Assignment
                             assignmentName="Homework 1: Uninformed Search"
-                            autoReleaseDate="Jan 21, 2026 14:00:00 EDT"
+                            autoReleaseDate="Jan 21, 2026 14:00:00"
                             outDate="1/21"
                             dueDate="2/2"
                             href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
                         />
                         <Assignment
                             assignmentName="Homework 2: Informed Search"
-                            autoReleaseDate="Jan 28, 2026 14:00:00 EDT"
+                            autoReleaseDate="Jan 28, 2026 14:00:00"
                             outDate="1/28"
                             dueDate="2/2"
                             href="https://hackmd.io/YBJfuAbtS6q9zRqVGHzW1Q"
                         />
                         <Assignment
                             assignmentName="Homework 3: Adversarial Search"
-                            autoReleaseDate="Feb 04, 2026 14:00:00 EDT"
+                            autoReleaseDate="Feb 04, 2026 14:00:00"
                             outDate="2/4"
                             dueDate="2/9"
                             href="https://hackmd.io/VEyD0wKYS5agl5Ovy5vclA"
                         />
                         <Assignment
                             assignmentName="Homework 4: SAT"
-                            autoReleaseDate="Feb 11, 2026 14:00:00 EDT"
+                            autoReleaseDate="Feb 11, 2026 14:00:00"
                             outDate="2/11"
                             dueDate="2/18"
                             href="https://hackmd.io/8oosauPNQ9-GjTHUVd01Hw"
                         />
                         <Assignment
                             assignmentName="Homework 5: KRR"
-                            autoReleaseDate="Feb 18, 2026 14:00:00 EDT"
+                            autoReleaseDate="Feb 18, 2026 14:00:00"
                             outDate="2/18"
                             dueDate="2/24"
                             href="https://hackmd.io/sPAQJzC8S368FUP07PKNgg"
                         />
                         <Assignment
                             assignmentName="Homework 6: Constrained Optimization"
-                            autoReleaseDate="Feb 25, 2026 14:00:00 EDT"
+                            autoReleaseDate="Feb 25, 2026 14:00:00"
                             outDate="2/25"
                             dueDate="3/9"
                             href="https://hackmd.io/qXuz85jXTWeV6O473a6TOg"
@@ -157,45 +169,66 @@ export default function Assignments() {
                         />
                         <Assignment
                             assignmentName="Homework 7: Linear Regression and Bias-Variance Tradeoff"
-                            autoReleaseDate="Mar 13, 2026 14:00:00 EDT"
+                            autoReleaseDate="Mar 13, 2026 14:00:00"
                             outDate="3/13"
                             dueDate="3/30"
                             href="https://hackmd.io/hzpjzJnYSaeZGuoIAyVrlQ"
                         />
                         <Assignment
                             assignmentName="Homework 8: Neural Networks"
-                            autoReleaseDate="Mar 20, 2026 14:00:00 EDT"
+                            autoReleaseDate="Mar 20, 2026 14:00:00"
                             outDate="3/20"
                             dueDate="4/6"
                             href="https://hackmd.io/MlpYU9rGSA6dy4aPXJ1Grg"
                         />
                         <Assignment
                             assignmentName="Homework 9: MDPs and Reinforcement Learning"
-                            autoReleaseDate="Apr 06, 2026 14:00:00 EDT"
+                            autoReleaseDate="Apr 06, 2026 14:00:00"
                             outDate="4/6"
                             dueDate="4/13"
                             href="https://hackmd.io/vwC97nAPTLa1QE3lAcQeTg"
                         />
                         <Assignment
                             assignmentName="Homework 10: LLMs + PDDL"
-                            autoReleaseDate="Apr 13, 2026 14:00:00 EDT"
+                            autoReleaseDate="Apr 13, 2026 14:00:00"
                             outDate="4/13"
                             dueDate="4/20"
                             href="https://hackmd.io/4cTsuCVRRmW1VxRnnDeHWg"
                         />
                         <Assignment
                             assignmentName="Final Project Part 1 (NO LATE DAYS ALLOWED)"
-                            autoReleaseDate="Apr 20, 2026 14:00:00 EDT"
+                            autoReleaseDate="Apr 20, 2026 14:00:00"
                             outDate="4/20"
                             dueDate="4/29"
                             href=""
                         />
                         <Assignment
                             assignmentName="Final Project Part 2 (NO LATE DAYS ALLOWED)"
-                            autoReleaseDate="Apr 20, 2026 14:00:00 EDT"
+                            autoReleaseDate="Apr 20, 2026 14:00:00"
                             outDate="4/20"
                             dueDate="5/4"
                             href=""
+                        />
+                        <Assignment
+                            assignmentName="test_ignore"
+                            autoReleaseDate="Apr 14, 2026 02:30:00"
+                            outDate="6/7"
+                            dueDate="6/7"
+                            href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
+                        />
+                        <Assignment
+                            assignmentName="test_ignore2"
+                            autoReleaseDate="Apr 14, 2026 03:30:00"
+                            outDate="6/7"
+                            dueDate="6/7"
+                            href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
+                        />
+                        <Assignment
+                            assignmentName="test_ignore3"
+                            autoReleaseDate="Apr 14, 2026 04:30:00"
+                            outDate="6/7"
+                            dueDate="6/7"
+                            href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
                         />
                     </tbody>
                 </table>
