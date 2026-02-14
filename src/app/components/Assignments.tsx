@@ -209,27 +209,6 @@ export default function Assignments() {
                             dueDate="5/4"
                             href=""
                         />
-                        <Assignment
-                            assignmentName="test_ignore"
-                            autoReleaseDate="Feb 14, 2026 02:33:00"
-                            outDate="6/7"
-                            dueDate="6/7"
-                            href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
-                        />
-                        <Assignment
-                            assignmentName="test_ignore2"
-                            autoReleaseDate="Feb 14, 2026 03:33:00"
-                            outDate="6/7"
-                            dueDate="6/7"
-                            href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
-                        />
-                        <Assignment
-                            assignmentName="test_ignore3"
-                            autoReleaseDate="Feb 14, 2026 04:33:00"
-                            outDate="6/7"
-                            dueDate="6/7"
-                            href="https://hackmd.io/J_rI-VavSAG-x_79-8xSnA"
-                        />
                     </tbody>
                 </table>
             </div>
