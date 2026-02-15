@@ -5,21 +5,22 @@ type DiscussionProps = {
     topic: string;
     date: string;
     slidesLink?: string;
+    quiz?: string;
 }
 
 const DISCUSSION_DATA = [
     { topic: "AI Policy", date: "2/2 - 2/6", link: "https://docs.google.com/presentation/d/1UqgWN4X2xrJzTaL2lTbZkFByhlmaBdov8xk1EhA1RPA/edit?usp=sharing" },
-    { topic: "HW 1 and 2", date: "2/9 - 2/13", link: "#" },
+    { topic: "HW 1 and 2", date: "2/9 - 2/13", link: "https://docs.google.com/presentation/d/1jqIHQsJzKm6iC-IIIoVKTtuonx-5bslh5YlRunVlQw8/edit?usp=sharing", quiz: "https://docs.google.com/document/d/1WuEmw4uMvogcjiS7eStASslrZG89-N3Ev9wgWhXiIqI/edit?usp=sharing"},
     { topic: "SRC - TBD", date: "2/23 - 2/27", link: "#" },
-    { topic: "HW 3 and 4", date: "3/2 - 3/6", link: "#" },
+    { topic: "HW 3 and 4", date: "3/2 - 3/6", link: "#" , quiz: "#"},
     { topic: "SRC - TBD", date: "3/9 - 3/13", link: "https://www.youtube.com/watch?v=4Jdp_dkduJc" },
-    { topic: "HW 5 and 6", date: "3/16 - 3/20", link: "https://www.youtube.com/watch?v=TJryIc0Cwy4" },
+    { topic: "HW 5 and 6", date: "3/16 - 3/20", link: "https://www.youtube.com/watch?v=TJryIc0Cwy4", quiz: "#" },
     { topic: "SRC - TBD", date: "3/30 - 4/3", link: "https://www.youtube.com/watch?v=vv8MI_y1Lsg" },
     { topic: "SRC - TBD", date: "4/6 - 4/10", link: "https://www.youtube.com/watch?v=XH3Xu1-cvII" },
-    { topic: "HW 7, 8 and 9", date: "4/13 - 4/17", link: "https://www.youtube.com/watch?v=kqhtEpXoOwcI" },
+    { topic: "HW 7, 8 and 9", date: "4/13 - 4/17", link: "https://www.youtube.com/watch?v=kqhtEpXoOwcI", quiz: "#" },
 ];
 
-function DiscussionRow({ topic, date, slidesLink }: DiscussionProps) {
+function DiscussionRow({ topic, date, slidesLink, quiz }: DiscussionProps) {
     return (
         <tr className="hover:bg-white/5 transition-colors group">
             {/* Added md:px-6 to reduce padding on mobile */}
@@ -38,6 +39,20 @@ function DiscussionRow({ topic, date, slidesLink }: DiscussionProps) {
                     </a>
                 ) : (
                     <span className="opacity-50 cursor-not-allowed">Slides</span>
+                )}
+            </td>
+            <td className="px-3 py-4 md:px-6 text-white/70">
+                {quiz ? (
+                    <a 
+                        href={quiz} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-yellow-400 hover:text-yellow-300 underline decoration-yellow-400/30 hover:decoration-yellow-300 transition-all font-medium"
+                    >
+                        Quiz
+                    </a>
+                ) : (
+                    <span className="opacity-50 cursor-not-allowed">Quiz</span>
                 )}
             </td>
             <td className="px-3 py-4 md:px-6 text-white/70 tabular-nums text-right whitespace-nowrap">
@@ -95,6 +110,7 @@ export default function Discussions() {
                                     topic={item.topic}
                                     date={item.date}
                                     slidesLink={item.link}
+                                    quiz={item.quiz}
                                 />
                             ))}
                         </tbody>
