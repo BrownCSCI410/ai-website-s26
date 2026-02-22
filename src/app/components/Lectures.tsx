@@ -82,7 +82,7 @@ const LECTURE_DATA: LectureItem[] = [
    name: "PDDL (+ a solver)", 
    readings: "R&N 10",
    resourceName: "PDDL",
-   resourceLink: `${PREFIX}PDDL.pdf`},
+   resourceLink: `${PREFIX}pddl.pdf`},
   { date: "Feb 13", 
    name: "(Bayesian) Probability Review",
    readings: "R&N 12" ,
