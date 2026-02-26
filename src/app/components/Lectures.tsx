@@ -101,7 +101,10 @@ const LECTURE_DATA: LectureItem[] = [
   { date: "Feb 25", name: "Convexity, Linear Programming",
      resourceName: "Convex Sets + Linear Programming",
    resourceLink: `${PREFIX}convex_sets.pdf`},
-  { date: "Feb 27", name: "Constrained Optimization (modeling)" },
+  { date: "Feb 27", name: "Constrained Optimization (modeling)", 
+     resourceName: "Notebook", 
+   resourceLink: 'https://colab.research.google.com/drive/1opX8tMD4aYabmZzP19WjX8Auep9XJCw_?usp=sharing'
+  },
   { date: "March 2", name: "Constrained Optimization Solving" },
   { date: "March 4", name: "Intro to Supervised Learning (k-NN)" },
   { date: "March 6", name: "Linear Regression" },
