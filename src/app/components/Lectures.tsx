@@ -100,7 +100,7 @@ const LECTURE_DATA: LectureItem[] = [
   { date: "Feb 23", name: "NO CLASS: snow day" },
   { date: "Feb 25", name: "Convexity, Linear Programming",
      resourceName: "Convex Sets + Linear Programming",
-   resourceLink: `${PREFIX}conv_sets.pdf`},
+   resourceLink: `${PREFIX}convex_sets.pdf`},
   { date: "Feb 27", name: "Constrained Optimization (modeling)" },
   { date: "March 2", name: "Constrained Optimization Solving" },
   { date: "March 4", name: "Intro to Supervised Learning (k-NN)" },
