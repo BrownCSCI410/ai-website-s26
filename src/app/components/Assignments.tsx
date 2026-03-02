@@ -6,7 +6,7 @@ type assignmentProps = {
     assignmentName: string,
     autoReleaseDate: string | undefined,
     outDate?: string,
-    dueDate?: string
+    dueDate?: string,
     href?: string
 }
 

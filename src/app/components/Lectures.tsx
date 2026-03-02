@@ -1,5 +1,4 @@
 import { PREFIX } from "./prefix";
-import React from 'react';
 
 // 1. Define the shape of your data items
 // This tells TypeScript: "Even if you don't see these fields yet, they are allowed."
@@ -7,9 +6,8 @@ type LectureItem = {
   date: string;
   name: string;
   readings?: string;
-  notesLink?: string;
-  resourceName?: string;
-  resourceLink?: string;
+  resourceNames?: string | string[];
+  resourceLinks?: string | string[];
 };
 
 // 2. Updated Type Definitions for the Component Props
@@ -17,9 +15,8 @@ type lectureProps = {
     lectureName: string,
     date?: string,
     readings?: string,
-    notesLink?: string,
-    resourceName?: string,
-    resourceLink?: string,
+    resourceNames?: string | string[],
+    resourceLinks?: string | string[],
 }
 
 // 3. Apply the type to the array: `const LECTURE_DATA: LectureItem[]`
@@ -33,77 +30,80 @@ const LECTURE_DATA: LectureItem[] = [
       date: "Jan 23", 
       name: "Search Problems: Blind Search (BFS, DFS), Iterative Deepening",
       readings: "R&N 3.0-3.4",
-      resourceName: "Uninformed Search",
-      resourceLink: `${PREFIX}uninformed_search.pdf` ,
+      resourceNames: "Uninformed Search",
+      resourceLinks: `${PREFIX}uninformed_search.pdf` ,
   },
   { 
       date: "Jan 26",
       name: "Heuristic Search (Best-g, Best-h)",       
       readings: "R&N 3.4-3.5.1",
-      resourceName: "Informed Search",
-      resourceLink: `${PREFIX}informed_search.pdf` 
+      resourceNames: "Informed Search",
+      resourceLinks: `${PREFIX}informed_search.pdf` 
   },
   { 
       date: "Jan 28", 
       name: "Optimal Search: A*",  
       readings: "R&N 3.5.2-3.7",
-      resourceName: "Informed Search",
-      resourceLink: `${PREFIX}informed_search.pdf` 
+      resourceNames: "Informed Search",
+      resourceLinks: `${PREFIX}informed_search.pdf` 
   },
   { 
       date: "Jan 30", 
       name: "Adversarial search (minimax + alpha-beta pruning)", 
       readings: "R&N 5.0-5.3 ",       
-      resourceName: "Adversarial Search",
-      resourceLink: `${PREFIX}adversarial_search.pdf`
+      resourceNames: "Adversarial Search",
+      resourceLinks: `${PREFIX}adversarial_search.pdf`
   },
   {   date: "Feb 2", 
       name: "Discrete Optimization: Local Search", 
       readings: "R&N 4.1", 
-      resourceName: "Local Search", 
-      resourceLink: `${PREFIX}local_search.pdf`
+      resourceNames: "Local Search", 
+      resourceLinks: `${PREFIX}local_search.pdf`
   },
   { date: "Feb 4", 
    name: "Propositional Logic, SAT and NP-Completeness", 
    readings: "R&N 7.6.2-7.6.3" ,
-   resourceName: "Satisfiability", 
-   resourceLink: `${PREFIX}satisfiability.pdf`
+   resourceNames: "Satisfiability", 
+   resourceLinks: `${PREFIX}satisfiability.pdf`
   },
   { date: "Feb 6", 
    name: "CSPs: GSAT, WALKSAT, N-Queens",
-   resourceName: "Satisfiability", 
-   resourceLink: `${PREFIX}satisfiability.pdf`},
+   resourceNames: "Satisfiability", 
+   resourceLinks: `${PREFIX}satisfiability.pdf`},
   { date: "Feb 9", 
    name: "First Order Logic", 
    readings: "R&N 8", 
-   resourceName: "KRR: First-Order Logic", 
-   resourceLink: `${PREFIX}krr_logic.pdf`},
+   resourceNames: "KRR: First-Order Logic", 
+   resourceLinks: `${PREFIX}krr_logic.pdf`},
   { date: "Feb 11", 
    name: "PDDL (+ a solver)", 
    readings: "R&N 10",
-   resourceName: "PDDL",
-   resourceLink: `${PREFIX}pddl.pdf`},
+   resourceNames: "PDDL",
+   resourceLinks: `${PREFIX}pddl.pdf`},
   { date: "Feb 13", 
    name: "(Bayesian) Probability Review",
    readings: "R&N 12" ,
-   resourceName: "Probability",
-   resourceLink: `${PREFIX}probability.pdf`},
+   resourceNames: "Probability",
+   resourceLinks: `${PREFIX}probability.pdf`},
   { date: "Feb 16", name: "No Class" },
   { date: "Feb 18", 
    name: "Bayesian Networks (modeling)", 
    readings: "R&N 14", 
-   resourceName: "Bayesian Networks",
-   resourceLink: `${PREFIX}bayes_nets.pdf`},
+   resourceNames: "Bayesian Networks",
+   resourceLinks: `${PREFIX}bayes_nets.pdf`},
   { date: "Feb 20", name: "Continuous Optimization", 
-   resourceName: "Gradient Descent",
-   resourceLink: `${PREFIX}grad_descent.pdf`},
+   resourceNames: "Gradient Descent",
+   resourceLinks: `${PREFIX}grad_descent.pdf`},
   { date: "Feb 23", name: "NO CLASS: snow day" },
   { date: "Feb 25", name: "Convexity, Linear Programming",
-     resourceName: "Convex Sets + Linear Programming",
-   resourceLink: `${PREFIX}convex_sets.pdf`},
+     resourceNames: "Convex Sets + Linear Programming",
+   resourceLinks: `${PREFIX}convex_sets.pdf`},
   { date: "Feb 27", name: "Constrained Optimization (modeling)", 
-     resourceName: "Notebook", 
-   resourceLink: 'https://colab.research.google.com/drive/1opX8tMD4aYabmZzP19WjX8Auep9XJCw_?usp=sharing'
+     resourceNames: ["Notebook", "Mathematical Programming"], 
+   resourceLinks: [
+    'https://colab.research.google.com/drive/1opX8tMD4aYabmZzP19WjX8Auep9XJCw_?usp=sharing',
+    `${PREFIX}mathematical_programming.pdf`
+    ]
   },
   { date: "March 2", name: "Constrained Optimization Solving" },
   { date: "March 4", name: "Intro to Supervised Learning (k-NN)" },
@@ -135,7 +135,51 @@ const LECTURE_DATA: LectureItem[] = [
   { date: "May 4", name: "No Class" },
 ];
 
-function Lecture({lectureName, date, readings, notesLink, resourceName, resourceLink}: lectureProps) {
+interface resourceProps {
+    resourceNames?: string | string[],
+    resourceLinks?: string | string[]
+}
+
+function ResourceCol({resourceNames, resourceLinks} : resourceProps) {
+    if (resourceNames && resourceLinks) {
+        if (typeof resourceLinks === "string") {
+            // one resource for the day
+            return (<td className="px-3 md:px-6 py-4 text-white/70 whitespace-nowrap">
+                <a 
+                    href={resourceLinks}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="underline decoration-yellow-400/50 hover:decoration-yellow-400 text-yellow-200/90 hover:text-yellow-200 transition-all"
+                >
+                    {resourceNames}
+                </a>
+            </td>);
+        } else if (Array.isArray(resourceNames)) {
+            // multiple resources for the day
+            return (<td className="px-3 md:px-6 py-4 text-white/70 whitespace-nowrap">
+                {resourceNames.map((name, i) => (
+                    <div key={i}>
+                    <a 
+                        href={resourceLinks[i]}
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="underline decoration-yellow-400/50 hover:decoration-yellow-400 text-yellow-200/90 hover:text-yellow-200 transition-all"
+                    >
+                        {name}
+                    </a>
+                    </div>
+                ))}
+            </td>);
+        }
+    } else {
+        // no resources
+        return (<td className="px-3 md:px-6 py-4 text-white/70 whitespace-nowrap">
+            <span className="text-white/20"></span>
+        </td>);
+    }
+}
+
+function Lecture({lectureName, date, readings, resourceNames, resourceLinks}: lectureProps) {
     const isNoClass = lectureName === "No Class";
     return (
         <tr className={`hover:bg-white/5 transition-colors group ${isNoClass ? 'opacity-40' : ''} border-b border-white/5 last:border-0`}>
@@ -158,37 +202,8 @@ function Lecture({lectureName, date, readings, notesLink, resourceName, resource
                 )}
             </td>
 
-            {/* Notes Column */}
-            <td className="px-3 md:px-6 py-4 text-white/70 whitespace-nowrap">
-                {notesLink ? (
-                    <a 
-                        href={notesLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="underline decoration-yellow-400/50 hover:decoration-yellow-400 text-yellow-200/90 hover:text-yellow-200 transition-all"
-                    >
-                        Notes
-                    </a>
-                ) : (
-                    <span className="text-white/20">-</span>
-                )}
-            </td>
-
             {/* Additional Resources Column */}
-            <td className="px-3 md:px-6 py-4 text-white/70 whitespace-nowrap">
-                {(resourceName && resourceLink) ? (
-                    <a 
-                        href={resourceLink}
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="underline decoration-yellow-400/50 hover:decoration-yellow-400 text-yellow-200/90 hover:text-yellow-200 transition-all"
-                    >
-                        {resourceName}
-                    </a>
-                ) : (
-                    <span className="text-white/20"></span>
-                )}
-            </td>
+            <ResourceCol resourceNames={resourceNames} resourceLinks={resourceLinks}/>
         </tr>
     );
 }
@@ -227,9 +242,8 @@ export default function Lectures() {
                                 lectureName={item.name}
                                 date={item.date}
                                 readings={item.readings}
-                                notesLink={item.notesLink}
-                                resourceName={item.resourceName}
-                                resourceLink={item.resourceLink}
+                                resourceNames={item.resourceNames}
+                                resourceLinks={item.resourceLinks}
                             />
                         ))}
                     </tbody>
