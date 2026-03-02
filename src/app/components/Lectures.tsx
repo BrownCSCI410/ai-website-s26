@@ -230,8 +230,7 @@ export default function Lectures() {
                             <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm w-4/12">Lecture</th>
                             <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm w-1/12">Date</th>
                             <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm w-2/12">Readings</th>
-                            <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm w-1/12">Notes</th>
-                            <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm w-4/12">Resources</th>
+                            <th className="px-3 md:px-6 py-4 font-bold text-yellow-400 uppercase tracking-wider text-sm w-4/12">Notes / Resources</th>
                         </tr>
                     </thead>
 
