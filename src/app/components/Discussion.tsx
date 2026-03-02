@@ -11,7 +11,7 @@ type DiscussionProps = {
 const DISCUSSION_DATA = [
     { topic: "AI Policy", date: "2/2 - 2/6", link: "https://docs.google.com/presentation/d/1UqgWN4X2xrJzTaL2lTbZkFByhlmaBdov8xk1EhA1RPA/edit?usp=sharing" },
     { topic: "HW 1 and 2", date: "2/9 - 2/13", link: "https://docs.google.com/presentation/d/1jqIHQsJzKm6iC-IIIoVKTtuonx-5bslh5YlRunVlQw8/edit?usp=sharing", quiz: "https://docs.google.com/document/d/1WuEmw4uMvogcjiS7eStASslrZG89-N3Ev9wgWhXiIqI/edit?usp=sharing"},
-    { topic: "SRC - TBD", date: "2/23 - 2/27", link: "#" },
+    { topic: "Bias in Data", date: "2/23 - 2/27", link: "https://docs.google.com/presentation/d/1JWXv3U4M9M0Pnt290wR1TgHJJZyNULypHTbNho0gEdk/edit?usp=sharing" },
     { topic: "HW 3 and 4", date: "3/2 - 3/6", link: "#" , quiz: "#"},
     { topic: "SRC - TBD", date: "3/9 - 3/13", link: "https://www.youtube.com/watch?v=4Jdp_dkduJc" },
     { topic: "HW 5 and 6", date: "3/16 - 3/20", link: "https://www.youtube.com/watch?v=TJryIc0Cwy4", quiz: "#" },
