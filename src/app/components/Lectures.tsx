@@ -109,7 +109,9 @@ const LECTURE_DATA: LectureItem[] = [
       resourceNames: "Lagrangians",
    resourceLinks: `${PREFIX}Lagrangians.pdf`
   },
-  { date: "March 4", name: "Intro to Supervised Learning (k-NN)" },
+  { date: "March 4", name: "Intro to Supervised Learning (k-NN)",
+        resourceNames: "Supervised Learning",
+   resourceLinks: `${PREFIX}supervised_learning.pdf`},
   { date: "March 6", name: "Linear Regression" },
   { date: "March 9", name: "Bias and Variance Tradeoff" },
   { date: "March 11", name: "Logistic Regression and Entropy" },
