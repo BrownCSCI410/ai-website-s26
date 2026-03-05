@@ -105,7 +105,10 @@ const LECTURE_DATA: LectureItem[] = [
     `${PREFIX}mathematical_programming.pdf`
     ]
   },
-  { date: "March 2", name: "Constrained Optimization Solving" },
+  { date: "March 2", name: "Constrained Optimization Solving",
+      resourceNames: "Lagrangians",
+   resourceLinks: `${PREFIX}Lagrangians.pdf`
+  },
   { date: "March 4", name: "Intro to Supervised Learning (k-NN)" },
   { date: "March 6", name: "Linear Regression" },
   { date: "March 9", name: "Bias and Variance Tradeoff" },
