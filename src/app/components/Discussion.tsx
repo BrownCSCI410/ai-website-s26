@@ -15,8 +15,8 @@ const DISCUSSION_DATA = [
     { topic: "HW 3 and 4", date: "3/2 - 3/6", link: "https://docs.google.com/presentation/d/1lce1FgabbKskdzPpApQZkwJXmPbecRannUg2m9WPo8k/edit?usp=sharing" , quiz: "https://docs.google.com/document/d/1sRfMfUYfluL9zbi4VdJcxBfoa-1GKjkoH2j8vrjR1Wg/edit?usp=sharing"},
     { topic: "Automated Decision-Making", date: "3/9 - 3/13", link: "https://docs.google.com/presentation/d/1N3tyXpi5mwsPr5ZaCB40VKReWrTOHbeXve002kLxmaE/edit?usp=sharing" },
     { topic: "HW 5 and 6", date: "3/16 - 3/20", link: "https://docs.google.com/presentation/d/1Qmm8IgYsUuKhrSd16298VFsTj6owaSVIq_hmE-KF-Ws/edit?usp=sharing", quiz: "https://docs.google.com/document/d/1SMe8m3d4lzRJRtLNfJs4woY5VcgbdBsZXcXaMEoErc0/edit?usp=sharing" },
-    { topic: "SRC - TBD", date: "3/30 - 4/3", link: "https://www.youtube.com/watch?v=vv8MI_y1Lsg" },
-    { topic: "SRC - TBD", date: "4/6 - 4/10", link: "https://www.youtube.com/watch?v=XH3Xu1-cvII" },
+    { topic: "AI Innovation: Accels vs. Decels", date: "3/30 - 4/3", link: "https://docs.google.com/presentation/d/1LKs9eF8ndhtEdj_rSQeuabKWFqWHpq1ZB4euuej5b0A/edit?slide=id.p#slide=id.p" },
+    { topic: "Aggregation Bias/Fairness", date: "4/6 - 4/10", link: "https://www.youtube.com/watch?v=XH3Xu1-cvII" },
     { topic: "HW 7, 8 and 9", date: "4/13 - 4/17", link: "https://www.youtube.com/watch?v=kqhtEpXoOwcI", quiz: "#" },
 ];
 
