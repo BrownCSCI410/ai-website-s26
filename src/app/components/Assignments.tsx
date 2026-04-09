@@ -199,15 +199,22 @@ export default function Assignments() {
                             assignmentName="Final Project Part 1 (NO LATE DAYS ALLOWED)"
                             autoReleaseDate="Apr 20, 2026 14:00:00"
                             outDate="4/20"
-                            dueDate="4/29"
-                            href=""
+                            dueDate="4/25 soft, 5/4 hard"
+                            href="https://hackmd.io/lp701aRlRCqmmRS3Atvewg"
                         />
                         <Assignment
                             assignmentName="Final Project Part 2 (NO LATE DAYS ALLOWED)"
                             autoReleaseDate="Apr 20, 2026 14:00:00"
                             outDate="4/20"
-                            dueDate="5/4"
-                            href=""
+                            dueDate="4/29 soft, 5/4 hard"
+                            href="https://hackmd.io/B8BCfBV1QS-vxshLq3e3RQ"
+                        />
+                        <Assignment
+                            assignmentName="Final Project Part 3 (NO LATE DAYS ALLOWED)"
+                            autoReleaseDate="Apr 20, 2026 14:00:00"
+                            outDate="4/20"
+                            dueDate="5/4 hard"
+                            href="https://hackmd.io/5fmqxWzjTFW30HvXm-m2xQ"
                         />
                     </tbody>
                 </table>
