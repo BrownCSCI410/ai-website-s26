@@ -140,12 +140,20 @@ const LECTURE_DATA: LectureItem[] = [
      resourceLinks: `${PREFIX}mdps.pdf`},
   { date: "April 3", name: "Value Iteration" },
   { date: "April 6", name: "Q-Learning" },
-  { date: "April 8", name: "Probabilistic GEN AI: Naive Bayes" },
+  { date: "April 8", name: "Policy Gradient Methods",    
+     resourceNames: "Policy Gradient",
+     resourceLinks: `${PREFIX}policy_gradient.pdf` },
   { date: "April 10", name: "PCA + Linear Algebra Review" },
   { date: "April 13", name: "K-Means + Facility Location" },
-  { date: "April 15", name: "GMMs + Probability review" },
-  { date: "April 17", name: "Final Project: Go + MCTS" },
-  { date: "April 20", name: "AlphaGo: MCTS + Learning" },
+  { date: "April 15", name: "GMMs + Probability review", 
+    resourceNames: "Gaussian Mixture Models",
+    resourceLinks: `${PREFIX}GaussianMixtureModels.pdf`},
+  { date: "April 17", name: "Final Project: Go + MCTS", 
+    resourceNames: "MCTS",
+    resourceLinks: `${PREFIX}MCTS.pdf`},
+  { date: "April 20", name: "AlphaGo: MCTS + Learning", 
+    resourceNames: "MCTS",
+    resourceLinks: `${PREFIX}MCTS.pdf` },
   { date: "April 22", name: "Iterative Deepening Review" },
   { date: "April 24", name: "No Class" },
   { date: "April 27", name: "No Class" },
@@ -153,6 +161,10 @@ const LECTURE_DATA: LectureItem[] = [
   { date: "May 1", name: "No Class" },
   { date: "May 4", name: "No Class" },
 ];
+
+// policy_gradient.pdf
+// MCTS.pdf
+// GaussianMixtureModels.pdf
 
 interface resourceProps {
     resourceNames?: string | string[],
